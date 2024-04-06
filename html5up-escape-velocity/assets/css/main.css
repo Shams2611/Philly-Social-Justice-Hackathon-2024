@@ -1515,6 +1515,7 @@ input, select, textarea {
 	}
 
 	form input[type="text"],
+	form input[type="checkbox"],
 	form input[type="email"],
 	form input[type="password"],
 	form select,
@@ -1534,6 +1535,7 @@ input, select, textarea {
 	}
 
 		form input[type="text"]:focus,
+		form input[type="checkbox"]:focus,
 		form input[type="email"]:focus,
 		form input[type="password"]:focus,
 		form select:focus,
@@ -1542,6 +1544,7 @@ input, select, textarea {
 		}
 
 	form input[type="text"],
+	form input[type="checkbox"],
 	form input[type="email"]
 	input[type="password"] {
 		line-height: 1em;
@@ -2288,6 +2291,7 @@ input, select, textarea {
 		}
 
 		#footer form input[type="text"],
+		#footer form input[type="checkbox"],
 		#footer form input[type="email"],
 		#footer form input[type="password"],
 		#footer form select,
@@ -2297,6 +2301,7 @@ input, select, textarea {
 		}
 
 			#footer form input[type="text"]:focus,
+			#footer form input[type="checkbox"]:focus,
 			#footer form input[type="email"]:focus,
 			#footer form input[type="password"]:focus,
 			#footer form select:focus,
