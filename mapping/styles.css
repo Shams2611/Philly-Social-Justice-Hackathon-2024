@@ -1,0 +1,13 @@
+#map {
+    height: 300px;
+    width: 300px;
+    /* width: 50%; */
+}
+
+.leaflet-touch .leaflet-bar a {
+    color: white;
+    border: 0px;
+    /* width: 50px; */
+    background-color: #fb3a1b;
+    user-select: none;
+}
