@@ -33,8 +33,15 @@ const markersArr = {}
 for (let i = 0; i < 10; i++) {
     // markersArr.push([startingPos[0],startingPos[1]+0.001*i])
     markersArr["id" + i * 10] = {
-        "id": i * 10,
-        "type": "clinic",
+        "name": "clinic"+i,
+        "links": "https://example.com",
+        "hours": "9-5 mon-fri",
+        "contacts": "1800-minor-abort",
+        "otherInfo": "",
+        "pillOffered": true,
+        "pillInfo": "offered b4 9 months",
+        "surgeryOffered": false,
+        "surgeryInfo": "lorem ipsum",
         "long": startingPos[0],
         "lat": startingPos[1] + 0.001 * i
     }
@@ -43,15 +50,14 @@ for (let i = 0; i < 10; i++) {
 
 console.log(markersArr)
 
-window.addEventListener("DOMContentLoaded", (event) => {
-    document.getElementById('addMarker').addEventListener('click', function () {
-        for (const key in markersArr) {
-            // console.log(`Key: ${key}, Value: ${markersArr[key]}`);
-            var currentMarker = markersArr[key]
-            var marker = L.marker([currentMarker.long, currentMarker.lat], markerOptions);
-            marker.bindPopup(currentMarker.long.toString()).openPopup();
-            marker.addTo(map);
+for (const key in markersArr) {
+    // console.log(`Key: ${key}, Value: ${markersArr[key]}`);
+    var currentMarker = markersArr[key]
+    var marker = L.marker([currentMarker.long, currentMarker.lat], markerOptions);
+    marker.bindPopup(markersArr[key].name).openPopup();
+    marker.addTo(map).on('click', function(e) {
+        for (const item in ["name", "contacts", "hours"]) {
+            document.getElementById(item+"-label").innerText = markersArr[key][item];
         }
     });
-
-});
+}
