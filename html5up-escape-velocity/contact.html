@@ -35,18 +35,22 @@
 
                 <!-- Contact Form -->
                 <section>
-                    <form method="post" action="#">
+                    <form method="post" action="javascript: getInfo()">
                         <div class="row gtr-50">
                             <div class="col-6 col-12-small">
-                                <input type="text" name="name" id="contact-name" placeholder="Name" />
+                                <input type="text" name="name" id="name" placeholder="Name" />
                             </div>
                             <div class="col-6 col-12-small">
-                                <input type="email" name="email" id="contact-email" placeholder="Email" />
+                                <input type="text" name="number" id="number" placeholder="PhoneNumber" />
                             </div>
                             <div class="col-12">
                                 <textarea name="message" id="contact-message" placeholder="Briefly describe your issue" rows="4"></textarea>
                             </div>
                             <div class="col-12">
+                                <!--<label for="time">Preferred Time of contact</label><br>-->
+                                <input type="text" id="text" name="text" value="" placeholder="Preferred Time of Contact">
+                                <br>
+                                <br>
                                 <ul class="actions">
                                     <li><input type="submit" class="style1" value="Submit" /></li>
                                 </ul>
@@ -75,5 +79,6 @@
     <script src="assets/js/breakpoints.min.js"></script>
     <script src="assets/js/util.js"></script>
     <script src="assets/js/main.js"></script>
+    <script src="assets/js/contactForm.js"></script>
 </body>
 </html>
