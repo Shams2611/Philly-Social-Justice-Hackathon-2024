@@ -34,8 +34,14 @@ for (let i = 0; i < 10; i++) {
     // markersArr.push([startingPos[0],startingPos[1]+0.001*i])
     markersArr["id" + i * 10] = {
         "name": "clinic"+i,
-        "id": i * 10,
-        "type": "clinic",
+        "links": "https://example.com",
+        "hours": "9-5 mon-fri",
+        "contacts": "1800-minor-abort",
+        "otherInfo": "",
+        "pillOffered": true,
+        "pillInfo": "offered b4 9 months",
+        "surgeryOffered": false,
+        "surgeryInfo": "lorem ipsum",
         "long": startingPos[0],
         "lat": startingPos[1] + 0.001 * i
     }
@@ -44,25 +50,31 @@ for (let i = 0; i < 10; i++) {
 
 console.log(markersArr)
 
-window.addEventListener("DOMContentLoaded", (event) => {
-    document.getElementById('addMarker').addEventListener('click', function () {
-        for (const key in markersArr) {
-            // console.log(`Key: ${key}, Value: ${markersArr[key]}`);
-            var currentMarker = markersArr[key]
-            var marker = L.marker([currentMarker.long, currentMarker.lat], markerOptions);
-            marker.bindPopup(currentMarker.id.toString()).openPopup();
-            marker.addTo(map).on('click', function(e) {
-                var nameLabel = document.getElementById("name-label");
-                console.log(markersArr[key])
-                nameLabel.innerText = markersArr[key].name;
-            });
+for (const key in markersArr) {
+    // console.log(`Key: ${key}, Value: ${markersArr[key]}`);
+    var currentMarker = markersArr[key]
+    var marker = L.marker([currentMarker.long, currentMarker.lat], markerOptions);
+    marker.bindPopup(markersArr[key].name).openPopup();
+    marker.addTo(map).on('click', function(e) {
+        for (const item in ["name", "contacts", "hours"]) {
+            document.getElementById(item+"-label").innerText = markersArr[key][item];
         }
+        
     });
-});
-
-
-function onClick(name) {
-   var nameLabel = document.getElementById("name-label");
-   nameLabel.innerText = name;
-    // alert(this.getLatLng());
 }
+
+// window.addEventListener("DOMContentLoaded", (event) => {
+//     document.getElementById('addMarker').addEventListener('click', function () {
+//         for (const key in markersArr) {
+//             // console.log(`Key: ${key}, Value: ${markersArr[key]}`);
+//             var currentMarker = markersArr[key]
+//             var marker = L.marker([currentMarker.long, currentMarker.lat], markerOptions);
+//             marker.bindPopup(markersArr[key].name).openPopup();
+//             marker.addTo(map).on('click', function(e) {
+//                 var nameLabel = document.getElementById("name-label");
+//                 console.log(markersArr[key])
+//                 nameLabel.innerText = markersArr[key].name;
+//             });
+//         }
+//     });
+// });
