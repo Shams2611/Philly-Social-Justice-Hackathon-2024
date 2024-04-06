@@ -52,37 +52,26 @@ L.tileLayer('https://api.maptiler.com/maps/streets-v2-light/{z}/{x}/{y}.png?key=
 // var marker = new L.Marker([39.9596, -75.1904]);
 // marker.addTo(map);
 
-var clinicIconOptions = {
-    iconUrl: 'map_marker_red.png',
-    iconSize: [30, 30]
-}
-var attorneyIconOptions = {
-    iconUrl: 'map_marker_red.png',
-    iconSize: [30, 30]
-}
+// markerOptionsIcons = {
+//     clinic: 'marker_clinic.png',
+//     attorney: 'marker_attorney.png',
+//     courthouse: 'marker_courthouse.png'
+// }
+var markerImages = ['marker_clinic.png','marker_attorney.png','marker_courthouse.png']
 
-var courthouseIconOptions = {
-    iconUrl: 'map_marker_red.png',
-    iconSize: [30, 30]
-}
+var markerOptionsArr = []
 
-markerOptionsIcons = {
-    clinic: 'map_marker_red.png',
-    attorney: 'map_marker_red.png',
-    courthouse: 'map_marker_red.png'
-}
-
-for (const name in ["clinics",""]){
-
-}
-
-var markerOptions = {
-    clickable: true,
-    icon: L.icon( {
-        iconUrl: 'map_marker_red.png',
-        iconSize: [30, 30]
-    })
-}
+markerImages.forEach((element)=>{
+    var markerOptions = {
+        clickable: true,
+        icon: L.icon( {
+            iconUrl: element,
+            // iconUrl: 'map_marker_red.png',
+            iconSize: [40, 40]
+        })
+    }
+    markerOptionsArr.push(markerOptions)
+});
 
 // var marker = L.marker([39.9596, -75.1904], markerOptions);
 // marker.bindPopup('Burger popup').openPopup();
@@ -125,7 +114,7 @@ console.log(markersArr)
 // }
 
 clinics.forEach((clinic) => {
-    let marker = L.marker([clinic.long, clinic.lat], markerOptions);
+    let marker = L.marker([clinic.long, clinic.lat], markerOptionsArr[0]);
     marker.bindPopup(clinic.name).openPopup();
     marker.addTo(map).on('click', function(e) {
         document.getElementById("name-label").innerText = clinic.name;
@@ -134,7 +123,7 @@ clinics.forEach((clinic) => {
 });
 
 attorneys.forEach((attorney) => {
-    let marker = L.marker([attorney.long, attorney.lat], markerOptions);
+    let marker = L.marker([attorney.long, attorney.lat], markerOptionsArr[1]);
     marker.bindPopup(attorney.name).openPopup();
     marker.addTo(map).on('click', function(e) {
         document.getElementById("name-label").innerText = attorney.name;
@@ -143,7 +132,7 @@ attorneys.forEach((attorney) => {
 });
 
 courthouses.forEach((courthouse) => {
-    let marker = L.marker([courthouse.long, courthouse.lat], markerOptions);
+    let marker = L.marker([courthouse.long, courthouse.lat], markerOptionsArr[2]);
     marker.bindPopup(courthouse.name).openPopup();
     marker.addTo(map).on('click', function(e) {
         document.getElementById("name-label").innerText = courthouse.name;
