@@ -4,7 +4,7 @@ function getInfo(){
     info = {
         fname: document.getElementById("name").value,
         number: document.getElementById("number").value,
-        canText: document.getElementById("text").value,
+        canText: document.getElementById("text").vaulue,
         time: document.getElementById("time").value,
         extrainfo: ""
     };
