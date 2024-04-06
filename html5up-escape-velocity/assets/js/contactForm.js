@@ -3,7 +3,7 @@ function getInfo(){
     info = {
         fname: document.getElementById("fullname").value,
         number: document.getElementById("number").value,
-        canText: document.getElementById("text").checked,
+        canText: document.getElementById("canText").checked,
         time: document.getElementById("preferredTime").value,
         extrainfo: document.getElementById("extraInfo").value
     };
