@@ -1,7 +1,11 @@
-:root{
+:root {
     --lighter-gray: rgb(246, 246, 246);
     --darker-gray: rgb(234, 234, 234);
+    --blue: #8192ddff;
+    --pink: #f1a6c1;
+    --purple: #cdb4db;
 }
+
 #map {
     height: 300px;
     /* width: 300px; */
@@ -9,12 +13,11 @@
     /* width: 50%; */
 }
 
-
 .leaflet-touch .leaflet-bar a {
     color: white;
     border: 0px;
     /* width: 50px; */
-    background-color: #fb3a1b;
+    background-color: var(--pink);
     user-select: none;
 }
 
@@ -25,6 +28,7 @@
 
 .map-container {
     flex: 1;
+    /* margin: 1rem; */
     /* border-radius: 1rem; */
 }
 
@@ -32,12 +36,14 @@
 .info-container {
     flex: 1;
     background-color: var(--lighter-gray);
+
     padding: 1rem;
     margin: 1rem;
     border-radius: 1rem;
+
 }
 
-.info-label{
+.info-label {
     /* color: white; */
     background-color: var(--darker-gray);
     padding: .5rem;
@@ -47,37 +53,61 @@
     margin-top: .5rem;
     margin-bottom: .5rem;
 }
-.info-label:first-child{
+
+.info-label:first-child {
     margin-top: 0;
 }
-.info-label:last-child{
+
+.info-label:last-child {
     margin-bottom: 0;
 }
 
-th{
+th {
     text-align: left;
 }
 
-.info-label-icon{
+.info-label-icon {
     height: 2rem;
     width: 2rem;
-    background-color: red;
+    background-color: var(--pink);
     border-radius: 1rem;
     text-align: center;
     margin-right: .5rem;
 }
 
-.fa-solid{
-    color:white;
+.fa-solid {
+    color: white;
 }
 
-td{
+td {
     text-align: center;
 }
-table{
+
+table {
     width: 100%;
 }
 
-td > .fa-solid{
-    color:black;
+td>.fa-solid {
+    color: black;
 }
+
+.surgical-info-label,
+.pill-info-label {
+    padding-left: .5rem;
+    border-radius: .5rem;
+    margin: .25rem;
+}
+
+.pill-info-label {
+    background-color: var(--blue);
+}
+.surgical-info-label {
+    background-color: var(--purple);
+}
+
+
+/* background: repeating-linear-gradient(45deg,
+            white,
+            white 10px,
+            var(--lighter-gray)10px,
+            var(--lighter-gray)20px); */
