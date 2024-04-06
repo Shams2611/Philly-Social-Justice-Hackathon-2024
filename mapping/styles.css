@@ -11,3 +11,9 @@
     background-color: #fb3a1b;
     user-select: none;
 }
+
+#outer-container{
+    display: flex;
+    flex-direction: row;
+    
+}

@@ -33,6 +33,7 @@ const markersArr = {}
 for (let i = 0; i < 10; i++) {
     // markersArr.push([startingPos[0],startingPos[1]+0.001*i])
     markersArr["id" + i * 10] = {
+        "name": "clinic"+i,
         "id": i * 10,
         "type": "clinic",
         "long": startingPos[0],
@@ -49,9 +50,19 @@ window.addEventListener("DOMContentLoaded", (event) => {
             // console.log(`Key: ${key}, Value: ${markersArr[key]}`);
             var currentMarker = markersArr[key]
             var marker = L.marker([currentMarker.long, currentMarker.lat], markerOptions);
-            marker.bindPopup(currentMarker.long.toString()).openPopup();
-            marker.addTo(map);
+            marker.bindPopup(currentMarker.id.toString()).openPopup();
+            marker.addTo(map).on('click', function(e) {
+                var nameLabel = document.getElementById("name-label");
+                console.log(currentMarker)
+                nameLabel.innerText = currentMarker.name;
+            });
         }
     });
-
 });
+
+
+function onClick(name) {
+   var nameLabel = document.getElementById("name-label");
+   nameLabel.innerText = name;
+    // alert(this.getLatLng());
+}
