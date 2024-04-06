@@ -24,17 +24,16 @@ function getInfo(){
             time: document.getElementById("preferredTime").value,
             extrainfo: document.getElementById("extraInfo").value
         };
-        if(!(info.extrainfo != null || info.extrainfo == "")){
+        if(info.extrainfo == null || info.extrainfo == ""){
             info.extrainfo = "No extra information";
         }
-        console.log(info);
         info.canText = info.canText.trim().toLowerCase();
         if(!(info.canText =="yes" || info.canText =="no")) {
             alert("Answer 'Can we Text You' with Yes or No");
         }
         else {
             if(numberVal(info.number) == true){
-                window.open(`mailto:JudicialBypass@philadefender.org?subject=Minors Seeking Judicial Bypass&body=Name: ${info.fname}%0D%0APhone Number: ${info.number}%0D%0ACan we text you: ${info.canText}%0D%0APreferred Time of Contact: ${info.time}%0D%0AMessage: ${info.extrainfo}`);
+                window.open(`mailto:JudicialBypass@philadefender.org?subject=Minors Seeking Judicial Bypass&body=Name: ${info.fname}%0D%0APhone Number: ${info.number}%0D%0ACan we text you: ${info.canText}%0D%0APreferred Time of Contact: ${info.time}%0D%0AExtra Info: ${info.extrainfo}`);
             }else{
                 alert("Invalid phone number");
             }
