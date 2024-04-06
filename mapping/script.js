@@ -59,22 +59,5 @@ for (const key in markersArr) {
         for (const item in ["name", "contacts", "hours"]) {
             document.getElementById(item+"-label").innerText = markersArr[key][item];
         }
-        
     });
 }
-
-// window.addEventListener("DOMContentLoaded", (event) => {
-//     document.getElementById('addMarker').addEventListener('click', function () {
-//         for (const key in markersArr) {
-//             // console.log(`Key: ${key}, Value: ${markersArr[key]}`);
-//             var currentMarker = markersArr[key]
-//             var marker = L.marker([currentMarker.long, currentMarker.lat], markerOptions);
-//             marker.bindPopup(markersArr[key].name).openPopup();
-//             marker.addTo(map).on('click', function(e) {
-//                 var nameLabel = document.getElementById("name-label");
-//                 console.log(markersArr[key])
-//                 nameLabel.innerText = markersArr[key].name;
-//             });
-//         }
-//     });
-// });
