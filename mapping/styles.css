@@ -39,6 +39,7 @@
 
 .key-container {
     margin-right: 0;
+    margin-left: .5rem;
 }
 
 .info-label {
@@ -66,6 +67,8 @@ th {
 .info-label-icon {
     height: 2rem;
     width: 2rem;
+    min-width: 2rem;
+    min-height: 2rem;
     background-color: var(--pink);
     border-radius: 1rem;
     text-align: center;
