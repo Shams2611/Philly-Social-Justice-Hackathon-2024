@@ -28,26 +28,56 @@ https://maps.app.goo.gl/32rnpqoDT8SvK6f48
 https://maps.app.goo.gl/GBvmrWURNe44vKTM9
 */
 
-const clinics = [
+const map_item_info ={
+    "type":"",
+    "name":"",
+    "links":"",
+    "addr":"",
+    "contacts":"",
+        "otherInfo": "",
+        "pillOffered": false,
+        "pillInfo": "",
+        "surgeryOffered": false,
+        "surgeryInfo": "",
+        "long": 0,
+        "lat": 0,
+        "hours": "hours : hours"
+}
+clinics = [
     {
         "type": "clinic",
         "name": "Philadelphia Women's Center",
         "links": "https://www.thewomenscenters.com/philadelphiawomenscenter/",
         "addr": "777 Appletree St 7th floor, Philadelphia, PA 19106",
         "contacts": "1800-minor-abort",
+        "phone":"",
+        "email":"",
         "otherInfo": "",
         "pillOffered": true,
         "pillInfo": "offered b4 9 months",
         "surgeryOffered": false,
         "surgeryInfo": "lorem ipsum",
-         
         "long": 39.953560,
         "lat": -75.151930,
         "hours": "hours : hours"
     }
-];
+]; 
+    attorney1 = map_item_info
+    attorney1.type="attorney"    
+    attorney1.name="Defenders Association of Philadelphia"
+    attorney1.links="https://www.thewomenscenters.com/philadelphiawomenscenter/"
+    attorney1.addr="1441 Sansom ST, Philadelphia, PA 19102"
+    attorney1.contacts="Attorney Elizabeth Flanagan (can text or call)"
+    attorney1.phone="(267)-293-9644"
+    attorney1.email="JudicialBypass@philadefender.org"
+    attorney1.long="39.9565"
+    attorney1.lat="-75.1924"
 
+const map_items=[
+    attorney1,
+]
 const attorneys = [
+
     {
         "type": "attorney",
         "name": "Defenders Association of Philadelphia",
@@ -154,6 +184,29 @@ console.log(markersArr)
 
 //this is janky to have the code pasted this many times lol
 //should be fixed later
+map_items.forEach((map_item) => {
+    let marker = L.marker([map_item.long, map_item.lat], markerOptionsArr[0]);
+    marker.bindPopup(map_item.name).openPopup();
+    marker.addTo(map).on('click', function(e) {
+        document.getElementById("name-label").innerText = clinic.name;
+        document.getElementById("addr-label").innerText = clinic.addr;
+        document.getElementById("hours-label").innerText = clinic.hours;
+        document.getElementById("contacts-label").innerHTML = clinic.contacts
+        document.getElementById("methods-info").style.display = "block";
+        if (map_item.type === "clinic" ){
+        document.getElementById("pill-check").style.display = clinic.pillOffered ? "block" : "none"
+        document.getElementById("pill-x").style.display = !clinic.pillOffered ? "block" : "none"
+        document.getElementById("pill-info").innerHTML = clinic.pillInfo
+        document.getElementById("surgical-check").style.display = clinic.surgeryOffered ? "block" : "none"
+        document.getElementById("surgical-x").style.display = !clinic.surgeryOffered ? "block" : "none"
+        document.getElementById("surgical-info").innerHTML = clinic.surgeryInfo
+        }
+
+
+    });
+});
+
+
 clinics.forEach((clinic) => {
     let marker = L.marker([clinic.long, clinic.lat], markerOptionsArr[0]);
     marker.bindPopup(clinic.name).openPopup();
