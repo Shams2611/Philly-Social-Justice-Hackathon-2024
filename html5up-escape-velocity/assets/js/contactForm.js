@@ -3,11 +3,11 @@ function validate(k){
 }
 function getInfo(){
     var num = true;
-    extrainfo = document.getElementById("contact-message").value
-    k = [document.getElementById("name").value,
+
+    k = [document.getElementById("fullname").value,
     document.getElementById("number").value,
-    document.getElementById("text").value,
-    document.getElementById("time").value,];
+    document.getElementById("canText").value,
+    document.getElementById("preferredTime").value];
 
     for (let i = 0; i < k.length; i++) {
         if(k[i]==null || k[i]==""){
@@ -18,22 +18,26 @@ function getInfo(){
 
     if(num == true){
         info = {
-            fname: document.getElementById("name").value,
+            fname: document.getElementById("fullname").value,
             number: document.getElementById("number").value,
-            canText: document.getElementById("text").value,
-            time: document.getElementById("time").value,
-            extrainfo: ""
+            canText: document.getElementById("canText").value,
+            time: document.getElementById("preferredTime").value,
+            extrainfo: document.getElementById("extraInfo").value
         };
-        if(extrainfo != null){
-            info.extrainfo = extrainfo;
-        }else{
-            info.extrainfo = "No extra information"
+        if(!(info.extrainfo != null || info.extrainfo == "")){
+            info.extrainfo = "No extra information";
         }
         console.log(info);
-        if(numberVal(info.number) == true){
-            window.open(`mailto:maxkchiu@gmail.com?subject=Minors Seeking Judicial Bypass&body=First Name: ${info.fname}%0D%0ALast Name: ${info.lname}%0D%0APhone Number: ${info.number}%0D%0ACan we text you: ${info.canText}%0D%0APreferred Time of Contact: ${info.time}%0D%0AMessage: ${info.extrainfo}`);
-        }else{
-            alert("Invalid phone number");
+        info.canText = info.canText.trim().toLowerCase();
+        if(!(info.canText =="yes" || info.canText =="no")) {
+            alert("Answer 'Can we Text You' with Yes or No");
+        }
+        else {
+            if(numberVal(info.number) == true){
+                window.open(`mailto:JudicialBypass@philadefender.org?subject=Minors Seeking Judicial Bypass&body=Name: ${info.fname}%0D%0APhone Number: ${info.number}%0D%0ACan we text you: ${info.canText}%0D%0APreferred Time of Contact: ${info.time}%0D%0AMessage: ${info.extrainfo}`);
+            }else{
+                alert("Invalid phone number");
+            }
         }
     }else{
         alert("please complete form");
