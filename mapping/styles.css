@@ -1,8 +1,10 @@
 #map {
     height: 300px;
-    width: 300px;
+    /* width: 300px; */
+    width: 100%;
     /* width: 50%; */
 }
+
 
 .leaflet-touch .leaflet-bar a {
     color: white;
@@ -12,8 +14,15 @@
     user-select: none;
 }
 
-#outer-container{
+#outer-container {
     display: flex;
     flex-direction: row;
-    
+}
+
+.map-container {
+    flex: 1;
+}
+
+.info-container {
+    flex: 1;
 }
