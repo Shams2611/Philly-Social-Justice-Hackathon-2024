@@ -3,11 +3,11 @@ function validate(k){
 }
 function getInfo(){
     var num = true;
-    extrainfo = document.getElementById("contact-message").value
-    k = [document.getElementById("name").value,
+
+    k = [document.getElementById("fullname").value,
     document.getElementById("number").value,
-    document.getElementById("text").value,
-    document.getElementById("time").value,];
+    document.getElementById("canText").value,
+    document.getElementById("preferredTime").value,];
 
     for (let i = 0; i < k.length; i++) {
         if(k[i]==null || k[i]==""){
@@ -18,14 +18,14 @@ function getInfo(){
 
     if(num == true){
         info = {
-            fname: document.getElementById("name").value,
+            fname: document.getElementById("fullname").value,
             number: document.getElementById("number").value,
-            canText: document.getElementById("text").value,
-            time: document.getElementById("time").value,
+            canText: document.getElementById("canText").value,
+            time: document.getElementById("preferredTime").value,
             extrainfo: ""
         };
-        if(extrainfo != null){
-            info.extrainfo = extrainfo;
+        if(info.extrainfo != null){
+            info.extrainfo = "extrainfo";
         }else{
             info.extrainfo = "No extra information"
         }
