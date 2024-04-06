@@ -20,7 +20,7 @@
                     <li><a href="index.html">Home</a></li>
                     <li><a href="timeline.html">Timeline</a></li>
                     <li><a href="find-a-clinic.html">Find a Clinic</a></li>
-                    <li class="current"><a href="contact-attorney.html">Contact an Attorney</a></li>
+                    <li class="current"><a href="contact.html">Contact an Attorney</a></li>
                 </ul>
             </nav>
         </section>
@@ -37,18 +37,37 @@
                 <section>
                     <form method="post" action="javascript: getInfo()">
                         <div class="row gtr-50">
-                            <div class="col-6 col-12-small">
-                                <input type="text" name="name" id="name" placeholder="Name" />
-                            </div>
-                            <div class="col-6 col-12-small">
-                                <input type="text" name="number" id="number" placeholder="PhoneNumber" />
+<<<<<<< HEAD
+                            <div class="col-12">
+                                <input type="text" name="name" id="contact-name" placeholder="Name" />
                             </div>
                             <div class="col-12">
-                                <textarea name="message" id="contact-message" placeholder="Briefly describe your issue" rows="4"></textarea>
+                                <input type="email" name="email" id="contact-email" placeholder="Email" />
                             </div>
                             <div class="col-12">
-                                <!--<label for="time">Preferred Time of contact</label><br>-->
-                                <input type="text" id="text" name="text" value="" placeholder="Preferred Time of Contact">
+                                <input type="email" name="phone number" id="contact-email" placeholder="Phone Number" />
+                            </div>
+                            <div class="col-12">
+                                <textarea name="message" id="contact-message" placeholder="Mention your issue to the attorney" rows="4"></textarea>
+=======
+                            <div class="col-6 col-12-small">
+                                <input type="text" name="name" id="fullname" placeholder="Name:" />
+                            </div>
+                            <div class="col-6 col-12-small">
+                                <input type="text" name="number" id="number" placeholder="Phone Number:" />
+                            </div>
+                            <div class="col-6 col-8-small">
+                                <input type="text" name="preferredTime" id="preferredTime" placeholder="Preferred Time of Contact:"/>
+                            </div>
+                            <div class="col-6 col-8-small">
+                                <label for="text">Can we text you?</label>
+                                <input type="checkbox" name="text" id="text"/>
+                            </div>
+                            <div class="col-12">
+                                <textarea name="extraInfo" id="extraInfo" placeholder="Extra Information:" rows="4"></textarea>
+>>>>>>> f5d42580342e5566ffc6254602adcc4f736e8148
+                            </div>
+                            <div class="col-12">
                                 <br>
                                 <br>
                                 <ul class="actions">

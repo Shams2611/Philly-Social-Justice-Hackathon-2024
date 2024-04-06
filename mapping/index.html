@@ -9,8 +9,8 @@
         integrity="sha256-p4NxAoJBhIIN+hmNHrzRCf9tD/miZyoHS5obTRR9BMY=" crossorigin="" />
     <script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js"
         integrity="sha256-20nQCchB9co0qIjJZRGuk2/Z9VM+kNiyxNV1lvTlZBo=" crossorigin=""></script>
+    <script src="https://kit.fontawesome.com/2b9cdc1c9a.js" crossorigin="anonymous"></script>
     <link rel="stylesheet" href="styles.css">
-
 </head>
 
 <body>
@@ -30,17 +30,49 @@
                 link
                 weeks
                 how to sched.
-                sess
+                session (online, in person?)
              -->
-            <p id="name-label">Name</p>
-            <p id="contact-label">Lorem</p>
-            <p id="hours-label">Ipsum</p>
-            <p id="scheduling-label">Doler</p>
-            <!-- <p id="scheduling-label">Doler</p> -->
+            <div class="info-label">
+                <div class="info-label-icon">
+                    <i class="fa-solid fa-location-dot"></i>
+                </div>
+                Name: <span id="name-label"></span>
+            </div>
+            <div class="info-label">
+                <div class="info-label-icon">
+                    <i class="fa-solid fa-address-card"></i>
+                </div>
+                Contact: <span id="contacts-label"> </span>
+            </div>
+            <div class=info-label>
+                <table>
+                    <tr>
+                        <th>Pill</th>
+                        <td>yes</td>
+                        <td>15 week</td>
+                    </tr>
+                    <tr>
+                        <th>Surgincal</th>
+                        <td>yes</td>
+                        <td>15 week</td>
+                    </tr>
+                </table>
+            </div>
+            <div class="info-label">
+                <div class="info-label-icon">
+                    <i class="fa-solid fa-clock"></i>
+                </div>
+                Hours: <span id="hours-label"></span>
+            </div>
+            <div class="info-label">
+                <div class="info-label-icon">
+                    <i class="fa-solid fa-car-side"></i>
+                </div>
+                Transportation: <span id="transportation-label"></span>
+            </div>
         </div>
     </div>
     <script src="script.js"></script>
-    <button id="addMarker">Add Marker</button>
 </body>
 
 </html>
