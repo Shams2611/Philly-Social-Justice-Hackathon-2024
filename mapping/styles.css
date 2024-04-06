@@ -70,3 +70,14 @@ th{
 .fa-solid{
     color:white;
 }
+
+td{
+    text-align: center;
+}
+table{
+    width: 100%;
+}
+
+td > .fa-solid{
+    color:black;
+}

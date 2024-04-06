@@ -11,16 +11,40 @@ L.tileLayer('https://api.maptiler.com/maps/streets-v2-light/{z}/{x}/{y}.png?key=
 // var marker = new L.Marker([39.9596, -75.1904]);
 // marker.addTo(map);
 
-var iconOptions = {
+var clinicIconOptions = {
     iconUrl: 'map_marker_red.png',
     iconSize: [30, 30]
 }
-var customIcon = L.icon(iconOptions);
+var attorneyIconOptions = {
+    iconUrl: 'map_marker_red.png',
+    iconSize: [30, 30]
+}
 
+var courthouseIconOptions = {
+    iconUrl: 'map_marker_red.png',
+    iconSize: [30, 30]
+}
+
+// var iconOptions = {
+//     iconUrl: 'map_marker_red.png',
+//     iconSize: [30, 30]
+// }
+// var customIcon = L.icon( {
+//     iconUrl: 'map_marker_red.png',
+//     iconSize: [30, 30]
+// });
+
+markerOptionsArr = []
+for (const name in ["clinics",""]){
+
+}
 var markerOptions = {
     // title: "MyLocation",
     clickable: true,
-    icon: customIcon
+    icon: L.icon( {
+        iconUrl: 'map_marker_red.png',
+        iconSize: [30, 30]
+    })
 }
 // var marker = L.marker([39.9596, -75.1904], markerOptions);
 // marker.bindPopup('Burger popup').openPopup();
@@ -56,8 +80,8 @@ for (const key in markersArr) {
     var marker = L.marker([currentMarker.long, currentMarker.lat], markerOptions);
     marker.bindPopup(markersArr[key].name).openPopup();
     marker.addTo(map).on('click', function(e) {
-        for (const item in ["name", "contacts", "hours"]) {
-            document.getElementById(item+"-label").innerText = markersArr[key][item];
-        }
+        // for (const item in ["name"]) {
+            document.getElementById("name-label").innerText = markersArr[key]["name"];
+        // }
     });
 }
