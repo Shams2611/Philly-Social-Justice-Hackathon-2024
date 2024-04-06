@@ -3,18 +3,12 @@ function getInfo(){
     info = {
         fname: document.getElementById("fullname").value,
         number: document.getElementById("number").value,
-        canText: document.getElementById("canText").checked,
+        canText: document.getElementById("canText").value,
         time: document.getElementById("preferredTime").value,
         extrainfo: document.getElementById("extraInfo").value
     };
     if(info.extrainfo == null || info.extrainfo == ""){
         info.extrainfo = "No extra information";
-    }
-    if(info.canText == true) {
-        info.canText = "Yes";
-    }
-    else {
-        info.canText = "No";
     }
     console.log(info);
 
