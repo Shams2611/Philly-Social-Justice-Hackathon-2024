@@ -8,15 +8,12 @@
 
 #map {
     height: 300px;
-    /* width: 300px; */
     width: 100%;
-    /* width: 50%; */
 }
 
 .leaflet-touch .leaflet-bar a {
     color: white;
     border: 0px;
-    /* width: 50px; */
     background-color: var(--pink);
     user-select: none;
 }
@@ -28,23 +25,23 @@
 
 .map-container {
     flex: 1;
-    /* margin: 1rem; */
-    /* border-radius: 1rem; */
 }
 
-
-.info-container {
+.info-container,
+.key-container {
     flex: 1;
     background-color: var(--lighter-gray);
 
     padding: 1rem;
     margin: 1rem;
     border-radius: 1rem;
+}
 
+.key-container {
+    margin-right: 0;
 }
 
 .info-label {
-    /* color: white; */
     background-color: var(--darker-gray);
     padding: .5rem;
     border-radius: 1rem;
@@ -101,10 +98,24 @@ td>.fa-solid {
 .pill-info-label {
     background-color: var(--blue);
 }
+
 .surgical-info-label {
     background-color: var(--purple);
 }
 
+.key-entry {
+    display: flex;
+    line-height: 2rem;
+}
+
+.key-img {
+    height: 2rem;
+    width: 2rem;
+}
+
+hr {
+    border-top: 2px solid black;
+}
 
 /* background: repeating-linear-gradient(45deg,
             white,
