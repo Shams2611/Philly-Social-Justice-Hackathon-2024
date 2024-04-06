@@ -53,8 +53,8 @@ window.addEventListener("DOMContentLoaded", (event) => {
             marker.bindPopup(currentMarker.id.toString()).openPopup();
             marker.addTo(map).on('click', function(e) {
                 var nameLabel = document.getElementById("name-label");
-                console.log(currentMarker)
-                nameLabel.innerText = currentMarker.name;
+                console.log(markersArr[key])
+                nameLabel.innerText = markersArr[key].name;
             });
         }
     });
