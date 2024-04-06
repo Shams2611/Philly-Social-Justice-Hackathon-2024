@@ -17,6 +17,22 @@
     <div id="outer-container">
         <div class="map-container">
             <div id="map"></div>
+            <div class = "key-container">
+                Key:
+                <hr>
+                <div class = "key-entry">
+                    <img class = "key-img" src = "marker_clinic.png">
+                    Clinic
+                </div>
+                <div class = "key-entry">
+                    <img class = "key-img" src = "marker_attorney.png">
+                    Attorney
+                </div>
+                <div class = "key-entry">
+                    <img class = "key-img" src = "marker_courthouse.png">
+                    Courthouse
+                </div>
+            </div>
         </div>
         <div class="info-container">
             <!-- 
@@ -36,7 +52,13 @@
                 <div class="info-label-icon">
                     <i class="fa-solid fa-location-dot"></i>
                 </div>
-                Name: <span id="name-label"></span>
+                <span id="name-label"></span>
+            </div>
+            <div class="info-label">
+                <div class="info-label-icon">
+                    <i class="fa-solid fa-clock"></i>
+                </div>
+                Hours: <span id="hours-label"></span>
             </div>
             <div class="info-label">
                 <div class="info-label-icon">
@@ -44,25 +66,24 @@
                 </div>
                 Contact: <span id="contacts-label"> </span>
             </div>
-            <div class=info-label>
+            <div id="methods-info" class="info-label">
                 <table>
                     <tr>
-                        <th>Pill</th>
-                        <td>yes</td>
-                        <td>15 week</td>
+                        <th></th>
+                        <td>Offered</td>
+                        <td>Until</td>
                     </tr>
                     <tr>
-                        <th>Surgincal</th>
-                        <td>yes</td>
-                        <td>15 week</td>
+                        <th><div class="pill-info-label">Pill</div></th>
+                        <td><i class="fa-solid fa-check"></i></td>
+                        <td>xx week</td>
+                    </tr>
+                    <tr>
+                        <th><div class="surgical-info-label">Surgical</div></th>
+                        <td><i class="fa-solid fa-x"></i></td>
+                        <td>xx week</td>
                     </tr>
                 </table>
-            </div>
-            <div class="info-label">
-                <div class="info-label-icon">
-                    <i class="fa-solid fa-clock"></i>
-                </div>
-                Hours: <span id="hours-label"></span>
             </div>
             <div class="info-label">
                 <div class="info-label-icon">

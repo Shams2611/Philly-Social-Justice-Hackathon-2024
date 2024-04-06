@@ -36,46 +36,36 @@
 
                 <!-- Contact Form -->
                 <section>
-                    <section>
-                        <form method="post" action="javascript: getInfo()">
-                            <div class="row gtr-50">
-                                <div class="col-6 col-12-small">
-                                    <input type="text" name="name" id="fullname" placeholder="Name" />
-                                </div>
-                                <div class="col-6 col-12-small">
-                                    <input type="tel" name="number" id="number" placeholder="PhoneNumber" />
-                                </div>
-                                <div class="col-6 col-12-small">
-                                    <input type="text" name="preferredTime" id="preferredTime" placeholder="Preferred Time of Contact:"/>
-                                </div>
-                                <div class="col-6 col-12-small" id="text-checkbox" style="display: none;">
-                                    <label for="text">Can we text you?</label>
-                                    <input type="checkbox" name="text" id="text"/>
-                                </div>
-                                <div class="col-12">
-                                    <textarea name="extraInfo" id="extraInfo" placeholder="Extra Information:" rows="4"></textarea>
-                                </div>
-                                <div class="col-12">
-                                    <ul class="actions">
-                                        <li><input type="submit" class="style1" value="Submit" /></li>
-                                    </ul>
-                                </div>
+                    <form method="post" action="javascript: getInfo()">
+                        <div class="row gtr-50">
+                            <div class="col-6 col-12-small">
+                                <input type="text" name="name" id="fullname" placeholder="Name:" />
                             </div>
-                        </form>
-                    </section>
-                    
-                    <script>
-                    document.addEventListener('DOMContentLoaded', function () {
-                        var numberInput = document.getElementById('number');
-                        numberInput.addEventListener('input', toggleTextCheckbox);
-                    });
-                    
-                    function toggleTextCheckbox() {
-                        var textCheckboxDiv = document.getElementById('text-checkbox');
-                        textCheckboxDiv.style.display = this.value ? 'block' : 'none';
-                    }
-                    </script>
-                    
+                            <div class="col-6 col-12-small">
+                                <input type="text" name="number" id="number" placeholder="Phone Number:" />
+                            </div>
+                            <div class="col-6 col-12-small">
+                                <input type="text" name="preferredTime" id="preferredTime" placeholder="Preferred Time of Contact:"/>
+                            </div>
+                            <div class="col-6 col-12-small">
+                                <input type="text" name="canText" id="canText" placeholder="Can We Text You: Yes or No"/>
+                            </div>
+                            <div class="col-12">
+                                <textarea name="extraInfo" id="extraInfo" placeholder="Extra Information:" rows="4"></textarea>
+                            </div>
+                            <div class="col-12">
+                                <br>
+                                <br>
+                                <ul class="actions">
+                                    <li><input type="submit" class="style1" value="Submit" /></li>
+                                </ul>
+                            </div>
+                        </div>
+                    </form>
+                </section>
+            </div>
+        </section>
+
         <!-- Footer -->
         <section id="footer" class="wrapper">
             <div class="title">Legal Disclaimer</div>
