@@ -200,7 +200,7 @@ map_items[6].transport = "https://maps.app.goo.gl/X2KCULncJkLm9MReA"
 //     // clinic5
 // ]
 
-var map = L.map('map').setView([39.9596, -75.1904], 18);
+var map = L.map('map').setView([40.103990, -75.000660], 12);
 
 L.tileLayer('https://api.maptiler.com/maps/streets-v2-light/{z}/{x}/{y}.png?key=itORzsoRJTMoPJkSZRLH', {
     attribution: '<a href="https://www.maptiler.com/copyright/" target="_blank">&copy; MapTiler</a> <a href="https://www.openstreetmap.org/copyright" target="_blank">&copy; OpenStreetMap contributors</a>',
