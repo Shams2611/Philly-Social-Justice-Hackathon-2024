@@ -31,6 +31,27 @@
             overflow: hidden;
             transition: max-height 0.2s ease-out;
         }
+        @media (max-width: 768px) {
+    .accordion {
+        font-size: 14px; /* Smaller font size for mobile devices */
+        padding: 15px; /* Adjust padding for better spacing */
+    }
+
+    .panel {
+        padding: 0 15px; /* Adjust padding to match the accordion */
+    }
+
+    /* Additional styles for mobile devices */
+    /* Adjust these as necessary to fit the design of your accordion */
+    .highlight {
+        padding: 10px; /* Reduce padding around highlighted sections */
+    }
+
+    .col-4.col-12-medium {
+        width: 100%; /* Stack columns vertically on smaller screens */
+        padding: 0; /* Remove padding for full-width alignment */
+    }
+}
     </style>
 </head>
 <body class="is-preload">
