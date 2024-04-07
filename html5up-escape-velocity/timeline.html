@@ -1,47 +1,48 @@
 <!DOCTYPE HTML>
-<html>
+<html lang="en">
 <head>
     <title>Timeline & Court Process - Abortion for Teens</title>
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
     <link rel="stylesheet" href="assets/css/main.css" />
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet">
     <script src="https://kit.fontawesome.com/2b9cdc1c9a.js" crossorigin="anonymous"></script>
-</head>
-<body class="is-preload">
-    <div id="page-wrapper">
-
-        <!-- Header -->
-        <section id="header" class="wrapper">
-            <div id="logo">
-                <h1>Timeline and Court Process</a></h1>
-                <p>Confidential support and resources for abortion access</p>
-                <div id="quick-leave">
-                    <button onclick="quickLeave()">Quick Leave</button>
-                </div>
-            </div>
-            <nav id="nav">
-                <ul>
-                    <li><a href="index.html">Home</a></li>
-                    <li class="current"><a href="timeline.html">Timeline & Court Processes</a></li>
-                    <li><a href="find-a-clinic.html">Find a Clinic</a></li>
-                    <li><a href="funding.html">Get Funding</a></li>
-                    <li><a href="contact.html">Contact an Attorney</a></li>
-                </ul>
-            </nav>
-        </section>
-
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title></title>
     <style>
-        body {
-            color: #000; /* Making text color black for readability */
-            background-color: #f8f8f8;
-            margin: 0;
-            padding: 20px;
+        @font-face {
+            font-family: 'Atkinson Hyperlegible';
+            src: url('/path/to/Atkinson-Hyperlegible-Regular.woff2') format('woff2'),
+                 url('/path/to/Atkinson-Hyperlegible-Regular.woff') format('woff');
+            font-weight: 400;
+            font-style: normal;
         }
+
+        @font-face {
+            font-family: 'Atkinson Hyperlegible';
+            src: url('/path/to/Atkinson-Hyperlegible-Bold.woff2') format('woff2'),
+                 url('/path/to/Atkinson-Hyperlegible-Bold.woff') format('woff');
+            font-weight: 700;
+            font-style: normal;
+        }
+
+        body {
+            font-family: 'Atkinson Hyperlegible', Arial, sans-serif;
+            font-size: 14px; /* Increased body font size */
+        }
+
+        h1, h2, h3, h4, h5, h6 {
+            font-family: 'Atkinson Hyperlegible', Arial, sans-serif;
+            font-weight: bold; /* For bold headers */
+            font-size: 14px; /* Increased header font size */
+        }
+
+        a {
+            font-family: 'Atkinson Hyperlegible', Arial, sans-serif;
+            font-size: 16px; /* Link font size to match body text */
+            text-decoration: underline; /* Underlines the link */
+            color: #9066a8; /* Sets the link color */
+        }
+
+        /* Existing styles */
         .accordion {
             background-color: #eee;
             color: #444;
@@ -53,115 +54,108 @@
             outline: none;
             transition: 0.4s;
         }
-        .active, .accordion:hover {
+
+        .accordion:hover, .active {
             background-color: #ccc;
         }
+
         .panel {
-            padding: 20px 18px;
+            padding: 0 18px;
             background-color: white;
-            display: none;
+            max-height: 0;
             overflow: hidden;
-            text-align: left;
-        }
-        a {
-            color: pink; /* Standard link color */
-            text-decoration: none;
-        }
-        a:hover {
-            text-decoration: underline;
+            transition: max-height 0.2s ease-out;
         }
     </style>
 </head>
-<body>
-    <section id="main" class="wrapper style2">
-        <div class="container">
-            <!-- Judicial Bypass Process -->
-            <section>
+<body class="is-preload">
+    <div id="page-wrapper">
+        <!-- Header -->
+        <section id="header" class="wrapper">
+            <!-- Logo and Quick Leave Button -->
+            <div id="logo">
+                <h1>Timeline and Court Process</h1>
+                <p>Confidential support and resources for abortion access</p>
+                <div id="quick-leave">
+                    <button onclick="quickLeave()">Quick Leave</button>
+                </div>
+            </div>
+            <!-- Navigation -->
+            <nav id="nav">
+                <ul>
+                    <li><a href="index.html">Home</a></li>
+                    <li class="current"><a href="timeline.html">Timeline & Court Processes</a></li>
+                    <li><a href="find-a-clinic.html">Find a Clinic</a></li>
+                    <li><a href="funding.html">Get Funding</a></li>
+                    <li><a href="contact.html">Contact an Attorney</a></li>
+                </ul>
+            </nav>
+        </section>
+
+        <!-- Main Content -->
+        <section id="main" class="wrapper style2">
+            <div class="container">
                 <header class="style1">
                     <h2>How to Get an Abortion in Pennsylvania if You Are a Minor</h2>
-                    <p>Navigating the judicial bypass process allows minors to access abortion care confidentially and safely, ensuring autonomy over your reproductive health decisions without requiring parental consent. We understand that contacting an attorney and going to court can be a scary and overwhelming process. Learn more about the steps involved in the judicial bypass process, what a judicial bypass hearing looks like, and what kind of information your attorney and the judge will ask about. </p>
+                    <p>Navigating the judicial bypass process allows minors to access abortion care confidentially and safely, ensuring autonomy over your reproductive health decisions without requiring parental consent.</p>
                 </header>
-                <div class="feature-list">
-                    <div class="row">
-                        <div class="col-12">
-                            <!-- Accordion for Section 1 -->
-                            <button class="accordion">How to Get an Abortion in Pennsylvania if You Are a Minor</button>
-                            <div class="panel">
-                                <p>If you are under 18 in Pennsylvania, you can access abortion care with or without involving your parents. If you can involve your parent(s), they can provide parental consent for you to get an abortion. If you cannot involve them, you can go through the <a href="#judicial-bypass">judicial bypass process</a>.</p>
-                            </div>
-                            
-                            <!-- Accordion for Section 2 -->
-                            <button class="accordion">What is a Judicial Bypass?</button>
-                            <div class="panel">
-                                <p>A “Judicial bypass” is the process of going to court and meeting privately with a judge about your plan to have an abortion. The judge will ask you questions about your life to determine if you’re mature and well-informed to make this decision on your own. This process is completely FREE, with no court fees, and an attorney from the <a href="https://www.philadefender.org/">Defenders Association of Philadelphia Child Advocacy Unit</a> will support you at no cost.</p>
-                            </div>
-                            
-                            <!-- Accordion for Section 3 -->
-                            <button class="accordion">Steps in the Judicial Bypass Process</button>
-                            <div class="panel">
-                                <ol>
-                                    <li><strong>Initial appointment</strong> with an abortion provider. You will need to attend an information session at least 24 hours before your procedure. This may be done in person or via phone. Providers include <a href="https://www.plannedparenthood.org/">Planned Parenthood</a>, <a href="#womens-center">The Women’s Center</a>, or another provider.</li>
-                                    <li><strong>Speak with Child Advocacy Unit attorney</strong> to learn more about the process, answer background questions, and get prepped for court.</li>
-                                    <li><strong>Child Advocacy Unit will submit a petition</strong> to the court on your behalf.</li>
-                                    <li><strong>The judicial bypass hearing</strong> will take place. These hearings occur every Thursday at 9am at 1501 Arch St. Everything is confidential, and you will only be identified using your initials.</li>
-                                    <li>If the judge grants your bypass, <strong>they will sign and stamp the order of approval</strong>. If your abortion appointment is not already scheduled, call your provider to set up the appointment.</li>
-                                    <li><strong>Bring the signed court approval order</strong> to the abortion clinic when you have your appointment to show the judicial bypass has been granted.</li>
-                                </ol>
-                                <p>Please be in touch with your attorney if you have difficulties scheduling an appointment or have any issues with funding.</p>
-                            </div>
-                            
-                            <!-- Accordion for Section 4 -->
-                            <button class="accordion">Working with an Attorney</button>
-                            <div class="panel">
-                                <p>You will initially get in touch with the attorney who will represent you in the judicial bypass hearing over the phone. The attorney will review what a judicial bypass is, fill out the paperwork required to schedule a hearing, and give an overview of what to expect during the hearing, including the questions the judge is likely to ask.</p>
-                                <p>The information you share with the attorney is confidential and will not be shared with anyone outside of your legal team and the judge.</p>
-                            </div>
-                            
-                            <!-- Accordion for Section 5 -->
-                            <button class="accordion">The Hearing with the Judge</button>
-                            <div class="panel">
-                                <p>In Philadelphia, all judicial bypass hearings are done on Thursday mornings starting at 9am at Family Court located at 1501 Arch St, Philadelphia, PA 19102. You'll arrive at the courthouse and will go through the check-in line (including metal detectors) on the first floor. You cannot bring any food into the courthouse. Your attorney will let you know where in the building you'll meet them. The judicial bypass hearings are not done in the big courtrooms. Instead, you and your attorney will go directly into the judge's personal office.</p>
-                                <p>The judge wants to understand that you are mature and responsible enough to make the decision to have an abortion. To do so, many judges may ask about:</p>
-                                <ul>
-                                    <li>If you are in school, what grade, how school is going</li>
-                                    <li>Plans for after graduating from school</li>
-                                    <li>If you are working</li>
-                                    <li>Have you talked to anyone else (any adults or people they trust, including the nurses at the abortion clinic) about your decision to get an abortion?</li>
-                                    <li>Do you feel comfortable talking with that person about your plans and any questions or concerns you have?</li>
-                                    <li>Do you feel like you have enough information to make an informed decision about having an abortion?</li>
-                                </ul>
-                            </div>
-                        </div>
-                    </div>
+                
+                <!-- Accordion Section -->
+                <button class="accordion">How to Get an Abortion in Pennsylvania if You Are a Minor</button>
+                <div class="panel">
+                    <p>If you are under 18 in Pennsylvania, you can access abortion care with or without involving your parents...</p>
                 </div>
-            </section>
-        </div>
-    </section>
-    
-    <script>
-        var acc = document.getElementsByClassName("accordion");
-        var i;
-    
-        for (i = 0; i < acc.length; i++) {
-            acc[i].addEventListener("click", function() {
-                this.classList.toggle("active");
-                var panel = this.nextElementSibling;
-                if (panel.style.display === "block") {
-                    panel.style.display = "none";
-                } else {
-                    panel.style.display = "block";
-                }
-            });
-        }
-    </script>
-</div>
+                <button class="accordion">What is a Judicial Bypass?</button>
+                <div class="panel">
+                    <p>A “Judicial bypass” is the process of going to court and meeting privately with a judge...</p>
+                </div>
+                <button class="accordion">Steps in the Judicial Bypass Process</button>
+                <div class="panel">
+                    <ol>
+                        <li>Initial appointment with an abortion provider...</li>
+                        <li>Speak with Child Advocacy Unit attorney...</li>
+                        <li>Child Advocacy Unit will submit a petition...</li>
+                        <!-- Add additional steps as needed -->
+                    </ol>
+                </div>
+                <button class="accordion">Working with an Attorney</button>
+                <div class="panel">
+                    <p>You will initially get in touch with the attorney who will represent you in the judicial bypass hearing...</p>
+                </div>
+                <button class="accordion">The Hearing with the Judge</button>
+                <div class="panel">
+                    <p>In Philadelphia, all judicial bypass hearings are done on Thursday mornings...</p>
+                </div>
 
-<script src="assets/js/jquery.min.js"></script>
-<script src="assets/js/browser.min.js"></script>
-<script src="assets/js/breakpoints.min.js"></script>
-<script src="assets/js/util.js"></script>
-<script src="assets/js/main.js"></script>
+                <!-- Scripts for Accordion -->
+                <script>
+                    var acc = document.getElementsByClassName("accordion");
+                    var i;
+
+                    for (i = 0; i < acc.length; i++) {
+                        acc[i].addEventListener("click", function() {
+                            this.classList.toggle("active");
+                            var panel = this.nextElementSibling;
+                            if (panel.style.maxHeight){
+                                panel.style.maxHeight = null;
+                            } else {
+                                panel.style.maxHeight = panel.scrollHeight + "px";
+                            }
+                        });
+                    }
+                </script>
+            </div>
+        </section>
+        
+        <!-- Footer -->
+        
+        
+        <!-- Scripts -->
+        <script src="assets/js/jquery.min.js"></script>
+        <script src="assets/js/browser.min.js"></script>
+        <script src="assets/js/breakpoints.min.js"></script>
+        <script src="assets/js/util.js"></script>
+        <script src="assets/js/main.js"></script>
+    </div>
 </body>
 </html>
- </body>
-    </html>

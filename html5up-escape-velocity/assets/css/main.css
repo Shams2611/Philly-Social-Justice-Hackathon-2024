@@ -3020,6 +3020,7 @@ input, select, textarea {
 	
 
 /* Base styles for nav and toggle button */
+/* Add this to your main.css */
 .navbar-toggle {
     display: none;
     cursor: pointer;
@@ -3049,4 +3050,39 @@ input, select, textarea {
     .sidebar {
         z-index: 999; /* Below the toggle button */
     }
+}
+
+
+@font-face {
+    font-family: 'Atkinson Hyperlegible';
+    src: url('/path/to/Atkinson-Hyperlegible-Regular.woff2') format('woff2'),
+         url('/path/to/Atkinson-Hyperlegible-Regular.woff') format('woff');
+    font-weight: 400;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'Atkinson Hyperlegible';
+    src: url('/path/to/Atkinson-Hyperlegible-Bold.woff2') format('woff2'),
+         url('/path/to/Atkinson-Hyperlegible-Bold.woff') format('woff');
+    font-weight: 700;
+    font-style: normal;
+}
+
+body {
+    font-family: 'Atkinson Hyperlegible', Arial, sans-serif;
+    font-size: 14px; /* Increased body font size */
+}
+
+h1, h2, h3, h4, h5, h6 {
+    font-family: 'Atkinson Hyperlegible', Arial, sans-serif;
+    font-weight: bold; /* For bold headers */
+    font-size: 22px; /* Increased header font size */
+}
+
+a {
+    font-family: 'Atkinson Hyperlegible', Arial, sans-serif;
+    font-size: 16px; /* Link font size to match body text */
+    text-decoration: underline; /* Underlines the link */
+    color: #9066a8; /* Sets the link color */
 }
