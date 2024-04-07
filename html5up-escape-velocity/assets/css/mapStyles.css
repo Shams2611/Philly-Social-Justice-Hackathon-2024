@@ -1,0 +1,129 @@
+:root {
+    --lighter-gray: rgb(246, 246, 246);
+    --darker-gray: rgb(234, 234, 234);
+    --blue: #8192ddff;
+    --pink: #f1a6c1;
+    --purple: #cdb4db;
+}
+
+#map {
+    height: 300px;
+    width: 100%;
+}
+
+.leaflet-touch .leaflet-bar a {
+    color: white;
+    border: 0px;
+    background-color: var(--pink);
+    user-select: none;
+}
+
+#outer-container {
+    display: flex;
+    flex-direction: row;
+}
+
+.map-container {
+    flex: 1;
+}
+
+.info-container,
+.key-container,
+.blurb-container {
+    flex: 1;
+    background-color: var(--lighter-gray);
+
+    padding: 1rem;
+    margin: 1rem;
+    border-radius: 1rem;
+}
+
+.key-container,.blurb-container {
+    margin-right: 0;
+    margin-left: .5rem;
+}
+
+.info-label {
+    background-color: var(--darker-gray);
+    padding: .5rem;
+    border-radius: 1rem;
+    display: flex;
+    line-height: 2rem;
+    margin-top: .5rem;
+    margin-bottom: .5rem;
+    min-height: 2rem;
+}
+
+.info-label:first-child {
+    margin-top: 0;
+}
+
+.info-label:last-child {
+    margin-bottom: 0;
+}
+
+th {
+    text-align: left;
+}
+
+.info-label-icon {
+    height: 2rem;
+    width: 2rem;
+    min-width: 2rem;
+    min-height: 2rem;
+    background-color: var(--pink);
+    border-radius: 1rem;
+    text-align: center;
+    margin-right: .5rem;
+}
+
+.fa-solid {
+    color: white;
+}
+
+td {
+    text-align: center;
+}
+
+table {
+    width: 100%;
+}
+
+td>.fa-solid {
+    color: black;
+}
+
+.surgical-info-label,
+.pill-info-label {
+    padding-left: .5rem;
+    border-radius: .5rem;
+    margin: .25rem;
+}
+
+.pill-info-label {
+    background-color: var(--blue);
+}
+
+.surgical-info-label {
+    background-color: var(--purple);
+}
+
+.key-entry {
+    display: flex;
+    line-height: 2rem;
+}
+
+.key-img {
+    height: 2rem;
+    width: 2rem;
+}
+
+hr {
+    border-top: 2px solid black;
+}
+
+/* background: repeating-linear-gradient(45deg,
+            white,
+            white 10px,
+            var(--lighter-gray)10px,
+            var(--lighter-gray)20px); */
