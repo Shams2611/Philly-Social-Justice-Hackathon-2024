@@ -7,6 +7,14 @@
 	Free for personal and commercial use under the CCA 3.0 license (html5up.net/license)
 */
 
+:root {
+    --lighter-gray: rgb(246, 246, 246);
+    --darker-gray: rgb(234, 234, 234);
+    --blue: #8192ddff;
+    --pink: #f1a6c1;
+    --purple: #cdb4db;
+}
+
 html, body, div, span, applet, object,
 iframe, h1, h2, h3, h4, h5, h6, p, blockquote,
 pre, a, abbr, acronym, address, big, cite,
@@ -1665,7 +1673,7 @@ input, select, textarea {
 		input[type="reset"]:hover,
 		button:hover,
 		.button:hover {
-			background-color: #f98780;
+			background-color: var(--pink);
 		}
 
 		input[type="button"].large,
@@ -1682,7 +1690,7 @@ input, select, textarea {
 		input[type="reset"].style1,
 		button.style1,
 		.button.style1 {
-			background: #e97770 url("images/overlay.png");
+			background: var(--purple) url("images/overlay.png");
 			color: #fff;
 		}
 
@@ -1691,7 +1699,7 @@ input, select, textarea {
 			input[type="reset"].style1:hover,
 			button.style1:hover,
 			.button.style1:hover {
-				background-color: #f98780;
+				background-color: var(--pink);
 			}
 
 			input[type="button"].style1:active,
@@ -2012,13 +2020,13 @@ input, select, textarea {
 			}
 
 		.wrapper.style1 {
-			background: #e97770 url("images/overlay.png");
+			background: var(--pink) url("images/overlay.png");
 			color: #eee;
 			color: rgba(255, 255, 255, 0.75);
 		}
 
 			.wrapper.style1 .title {
-				background: #e97770 url("images/overlay.png");
+				background: var(--pink) url("images/overlay.png");
 				color: #fff;
 			}
 
