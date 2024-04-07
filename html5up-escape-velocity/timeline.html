@@ -13,12 +13,15 @@
             background-color: #eee;
             color: #444;
             cursor: pointer;
-            padding: 18px;
+            margin-bottom: 10px;
             width: 100%;
             border: none;
             text-align: left;
             outline: none;
             transition: 0.4s;
+            height: fit-content;
+            display: block;
+            border-radius: 19px;
         }
 
         .accordion:hover, .active {
@@ -35,7 +38,7 @@
         @media (max-width: 768px) {
     .accordion {
         font-size: 14px; /* Smaller font size for mobile devices */
-        padding: 15px; /* Adjust padding for better spacing */
+        /* padding: 15px; /* Adjust padding for better spacing */
     }
 
     .panel {
@@ -51,7 +54,7 @@
     .col-4.col-12-medium {
         width: 100%; /* Stack columns vertically on smaller screens */
         padding: 0; /* Remove padding for full-width alignment */
-    }
+    } 
 }
     </style>
 </head>
