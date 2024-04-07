@@ -103,7 +103,7 @@ xhttp.onload = function() {
             // document.getElementById("hours-label").innerText = map_item.hours;
             document.getElementById("contacts-label").innerHTML = map_item.phone;
             document.getElementById("methods-info").style.display = "none";
-            document.getElementById("transportation-label").innerHTML = "<a href="+map_item.transport+">Google Maps Link</a>";
+            document.getElementById("transportation-label").innerHTML = "<a style='color: var(--blue); text-decoration: underline;' href="+map_item.transport+">Google Maps Link</a>";
             let otherInfo = "";
             map_item.otherInfo.forEach((info) => {
                 otherInfo += `${info}<br/>`;
