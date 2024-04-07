@@ -217,8 +217,8 @@ L.tileLayer('https://api.maptiler.com/maps/streets-v2-light/{z}/{x}/{y}.png?key=
 //     clinic: 'marker_clinic.png',
 //     attorney: 'marker_attorney.png',
 //     courthouse: 'marker_courthouse.png'
-// }
-var markerImages = ['images/marker_clinic.png', 'images/marker_attorney.png', 'images/marker_courthouse.png']
+// }C:\Users\eland\Documents\GitHub\Philly-Social-Justice-Hackathon-2024\html5up-escape-velocity
+var markerImages = ['../html5up-escape-velocity/images/marker_clinic.png', 'images/marker_attorney.png', '../html5up-escape-velocity/images/marker_courthouse.png']
 
 var markerOptionsArr = []
 

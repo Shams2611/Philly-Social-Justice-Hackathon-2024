@@ -1,5 +1,6 @@
 <!DOCTYPE HTML>
 <html>
+
 <head>
     <title>Find a Clinic - Abortion for Teens</title>
     <meta charset="utf-8" />
@@ -13,6 +14,7 @@
     <script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js"
         integrity="sha256-20nQCchB9co0qIjJZRGuk2/Z9VM+kNiyxNV1lvTlZBo=" crossorigin=""></script>
 </head>
+
 <body class="no-sidebar is-preload">
     <div id="page-wrapper">
 
@@ -31,7 +33,7 @@
                 <ul>
                     <li><a href="index.html">Home</a></li>
                     <li><a href="timeline.html">Timeline & Court Processes</a></li>
-                    <li  class="current"><a href="find-a-clinic.html">Find a Clinic</a></li>
+                    <li class="current"><a href="find-a-clinic.html">Find a Clinic</a></li>
                     <li><a href="funding.html">Get Funding</a></li>
                     <li><a href="contact.html">Contact an Attorney</a></li>
                 </ul>
@@ -78,12 +80,12 @@
                             </div>
                             <span id="addr-label"></span>
                         </div>
-                        <div class="info-label">
+                        <!-- <div class="info-label">
                             <div class="info-label-icon">
                                 <i class="fa-solid fa-clock"></i>
                             </div>
                             <span id="hours-label"></span>
-                        </div>
+                        </div> -->
                         <div class="info-label">
                             <div class="info-label-icon">
                                 <i class="fa-solid fa-address-card"></i>
@@ -101,7 +103,8 @@
                                     <th>
                                         <div class="pill-info-label">Pill</div>
                                     </th>
-                                    <td><i id="pill-check" class="fa-solid fa-check"></i><i id="pill-x" class="fa-solid fa-x"></i>
+                                    <td><i id="pill-check" class="fa-solid fa-check"></i><i id="pill-x"
+                                            class="fa-solid fa-x"></i>
                                     </td>
                                     <td id="pill-info">xx week</td>
                                 </tr>
@@ -117,15 +120,29 @@
                         </div>
                         <div class="info-label">
                             <div class="info-label-icon">
+                                <i class="fa-solid fa-info"></i>
+                            </div>
+                            <span id="other-info-label"></span>
+                        </div>
+                        <div class="info-label">
+                            <div class="info-label-icon">
                                 <i class="fa-solid fa-car-side"></i>
                             </div>
                             <span id="transportation-label"></span>
                         </div>
+                        <br>
+                        Here is a list of all of the clinics in Philadelphia that provide abortion services, including
+                        their links, hours of operation, scheduling procedures, and contact information.
+                        Keep in mind Google maps is a great resource for determining bus schedules routes.
+                        If you are receiving a Surgical Abortion you may need a ride from someone over 18. If no one is
+                        available the facility will assist you in connecting with a volunteer riding program
                     </div>
                     <!-- <div class="tips-container">
-                        Below is a list of all of the clinics in Philadelphia that provide abortion services, including their links, hours of operation, scheduling procedures, and contact information. 
-            Keep in mind Google maps is a great resource for determining bus schedules routes.
-            If you are receiving a Surgical Abortion you may need a ride from someone over 18. If no one is available the facility will assist you in connecting with a volunteer riding program
+                        Below is a list of all of the clinics in Philadelphia that provide abortion services, including
+                        their links, hours of operation, scheduling procedures, and contact information.
+                        Keep in mind Google maps is a great resource for determining bus schedules routes.
+                        If you are receiving a Surgical Abortion you may need a ride from someone over 18. If no one is
+                        available the facility will assist you in connecting with a volunteer riding program
                     </div> -->
                 </div>
             </div>
@@ -141,4 +158,5 @@
     <script src="assets/js/main.js"></script>
     <script src="assets/js/mapUtils.js"></script>
 </body>
+
 </html>
