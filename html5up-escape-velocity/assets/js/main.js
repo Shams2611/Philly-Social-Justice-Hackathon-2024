@@ -64,3 +64,7 @@
 				});
 
 })(jQuery);
+
+function quickLeave() {
+    window.location.href = 'https://www.sephora.com';
+}
