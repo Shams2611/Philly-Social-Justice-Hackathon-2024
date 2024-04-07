@@ -80,13 +80,6 @@ input, select, textarea {
 	appearance: none;
 }
 
-#quick-leave {
-	position: fixed;
-	bottom: 1rem;
-	left: 1rem;
-	z-index: 5;
-}
-
 /* Basic */
 
 	@-ms-viewport {
@@ -3011,6 +3004,10 @@ input, select, textarea {
 	#quick-leave {
 		text-align: center;
 		margin-top: 10px; /* Adjust based on your header's layout */
+		position: fixed;
+		bottom: 1rem;
+		left: 1rem;
+		z-index: 5;
 	}
 	
 	#quick-leave button {
