@@ -2262,6 +2262,9 @@ input, select, textarea {
 	#highlights .highlight {
 		text-align: center;
 	}
+		#highlights .highlight ul li {
+			text-align: left;
+		}
 
 		#highlights .highlight h3 {
 			color: #e97770;
