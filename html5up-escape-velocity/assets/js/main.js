@@ -68,3 +68,11 @@
 function quickLeave() {
     window.location.href = 'https://www.sephora.com';
 }
+document.getElementById('sidebar-toggle').addEventListener('click', function() {
+    var sidebar = document.getElementById('nav');
+    if (sidebar.style.left === '-250px') {
+        sidebar.style.left = '0'; // Show sidebar
+    } else {
+        sidebar.style.left = '-250px'; // Hide sidebar
+    }
+});
