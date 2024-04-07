@@ -1480,6 +1480,15 @@ input, select, textarea {
 			line-height: 1.5em;
 		}
 
+		header.style4 p {
+			color: #b1b4b9;
+			display: block;
+			margin: 1.15em 0 0 0;
+			font-size: 1em;
+			letter-spacing: 0.075em;
+			line-height: 1.5em;
+		}
+
 /* Table */
 
 	table {
@@ -3102,7 +3111,7 @@ h1, h2, h3, h4, h5, h6 {
 
 a {
     font-family: 'Atkinson Hyperlegible', Arial, sans-serif;
-    font-size: 16px; /* Link font size to match body text */
+    font-size: 1em; /* Link font size to match body text */
     text-decoration: underline; /* Underlines the link */
     color: #9066a8; /* Sets the link color */
 }

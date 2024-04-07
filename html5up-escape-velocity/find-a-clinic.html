@@ -14,6 +14,14 @@
     <script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js"
         integrity="sha256-20nQCchB9co0qIjJZRGuk2/Z9VM+kNiyxNV1lvTlZBo=" crossorigin=""></script>
     <link rel="icon" type="image/x-icon" href="images/favicon.png">
+        <style>
+    /* Increase specificity */
+    section > div a {
+        color: blue !important; /* Ensure this overrides other styles */
+    }
+</style>
+
+        </style>
 </head>
 
 <body class="no-sidebar is-preload">
@@ -23,7 +31,7 @@
         <section id="header" class="wrapper">
             <!-- Logo -->
             <div id="logo">
-                <h1><a href="index.html">Find a Clinic</a></h1>
+                <h1>Find a Clinic</h1>
                 <p>Locate clinics and resources close to you</p>
                 <div id="quick-leave">
                     <button onclick="quickLeave()">Quick Leave <i class="fa-solid fa-right-from-bracket"></i></button>
@@ -32,7 +40,7 @@
             <!-- Nav -->
             <nav id="nav">
                 <ul>
-                    <li><a href="index.html">Home</a></li>
+                    <li><a href="../index.html">Home</a></li>
                     <li><a href="timeline.html">Timeline & Court Processes</a></li>
                     <li class="current"><a href="find-a-clinic.html">Find a Clinic</a></li>
                     <li><a href="funding.html">Get Funding</a></li>
@@ -159,6 +167,8 @@
             </div>
         </section>
     </div>
+
+
 
     <!-- Scripts -->
     <script src="assets/js/jquery.min.js"></script>
