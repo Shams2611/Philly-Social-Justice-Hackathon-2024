@@ -218,7 +218,7 @@ L.tileLayer('https://api.maptiler.com/maps/streets-v2-light/{z}/{x}/{y}.png?key=
 //     attorney: 'marker_attorney.png',
 //     courthouse: 'marker_courthouse.png'
 // }
-var markerImages = ['marker_clinic.png', 'marker_attorney.png', 'marker_courthouse.png']
+var markerImages = ['images/marker_clinic.png', 'images/marker_attorney.png', 'images/marker_courthouse.png']
 
 var markerOptionsArr = []
 
