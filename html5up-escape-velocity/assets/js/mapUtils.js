@@ -48,12 +48,12 @@ https://maps.app.goo.gl/GBvmrWURNe44vKTM9
 //     "transport": ""
 // }
 
-var map = L.map('map').setView([39.9596, -75.1904], 18);
+var map = L.map('map').setView([39.96, -75.13], 12);
 
 L.tileLayer('https://api.maptiler.com/maps/streets-v2-light/{z}/{x}/{y}.png?key=itORzsoRJTMoPJkSZRLH', {
     attribution: '<a href="https://www.maptiler.com/copyright/" target="_blank">&copy; MapTiler</a> <a href="https://www.openstreetmap.org/copyright" target="_blank">&copy; OpenStreetMap contributors</a>',
     maxZoom: 18,
-    minZoom: 12,
+    minZoom: 6,
     zoomSnap: 0.25,
     id: 'mapbox.streets',
 }).addTo(map);
