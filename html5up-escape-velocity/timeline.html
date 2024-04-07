@@ -8,7 +8,6 @@
     <script src="https://kit.fontawesome.com/2b9cdc1c9a.js" crossorigin="anonymous"></script>
     
     <style>
-        /* Styling for accordion dropdowns */
         .accordion {
             background-color: #eee;
             color: #444;
@@ -32,24 +31,40 @@
             overflow: hidden;
             transition: max-height 0.2s ease-out;
         }
+        @media (max-width: 768px) {
+    .accordion {
+        font-size: 14px; /* Smaller font size for mobile devices */
+        padding: 15px; /* Adjust padding for better spacing */
+    }
+
+    .panel {
+        padding: 0 15px; /* Adjust padding to match the accordion */
+    }
+
+    /* Additional styles for mobile devices */
+    /* Adjust these as necessary to fit the design of your accordion */
+    .highlight {
+        padding: 10px; /* Reduce padding around highlighted sections */
+    }
+
+    .col-4.col-12-medium {
+        width: 100%; /* Stack columns vertically on smaller screens */
+        padding: 0; /* Remove padding for full-width alignment */
+    }
+}
     </style>
 </head>
 <body class="is-preload">
     <div id="page-wrapper">
         <!-- Header -->
         <section id="header" class="wrapper">
-            <!-- Logo and Quick Leave Button -->
             <div id="logo">
                 <h1>Timeline and Court Process</h1>
                 <p>Confidential support and resources for abortion access</p>
-                <div id="quick-leave">
-                    <button onclick="quickLeave()">Quick Leave <i class="fa-solid fa-right-from-bracket"></i></button>
-                </div>
             </div>
-            <!-- Navigation -->
             <nav id="nav">
                 <ul>
-                    <li><a href="index.html">Home</a></li>
+                    <li><a href="../index.html">Home</a></li>
                     <li class="current"><a href="timeline.html">Timeline & Court Processes</a></li>
                     <li><a href="find-a-clinic.html">Find a Clinic</a></li>
                     <li><a href="funding.html">Get Funding</a></li>
@@ -62,34 +77,34 @@
         <section id="main" class="wrapper style2">
             <div class="container">
                 <header class="style1">
-                    <h2>How to Get an Abortion in Pennsylvania if You Are a Minor</h2>
-                    <p>Navigating the judicial bypass process allows minors to access abortion care confidentially and safely, ensuring autonomy over your reproductive health decisions without requiring parental consent. We understand that contacting an attorney and going to court can be a scary and overwhelming process. Learn more about the steps involved in the judicial bypass process, what a judicial bypass hearing looks like, and what kind of information your attorney and the judge will ask about. </p>
+                    <h2>Navigating the Judicial Bypass Process for Minors</h2>
+                    <p>We understand that contacting an attorney and going to court can be a scary and overwhelming process. Learn more about the steps involved in the judicial bypass process, what a judicial bypass hearing looks like, and what kind of information your attorney and the judge will ask about.</p>
                 </header>
 
-                <!-- Accordion Section -->
-                <button class="accordion">How to get an abortion in Pennsylvania if you are a minor</button>
+                <!-- Accordion Sections with Inline CSS for Smaller Font -->
+                <button class="accordion" style="font-size: 14px;">How to get an abortion in Pennsylvania if you are a minor</button>
                 <div class="panel">
                     <p>If you are under 18 in Pennsylvania you can access abortion care with or without involving your parents. If you are able to involve your parent(s), that adult can provide parental consent for you to get an abortion. If you cannot involve their parent(s), then you can go through the judicial bypass process. </p>
                 </div>
 
-                <button class="accordion">What is a judicial bypass?</button>
+                <button class="accordion" style="font-size: 14px;">What is a judicial bypass?</button>
                 <div class="panel">
                     <p>A “Judicial bypass” is the process of going to court and meeting privately with a judge about your plan to have an abortion. The judge will ask you (the minor) some questions about your life to learn about you so the judge can determine that you’re mature and well-informed to make this decision on your own. In legal terms, this meeting is called a hearing and the process is called a “judicial bypass.” Your attorney will submit a request to the judge called a petition.</p>
                     <p>This process is completely FREE. There are no court fees you will need to pay and an attorney from the Defenders Association of Philadelphia Child Advocacy Unit will represent you and support you through this process at no cost. </p>
                 </div>
 
-                <button class="accordion">Steps in the Judicial Bypass Process</button>
+                <button class="accordion" style="font-size: 14px;">Steps in the Judicial Bypass Process</button>
                 <div class="panel">
                     <ol>
                         <li>Initial appointment with an abortion provider (i.e. Planned Parenthood, The Women’s Center, or another provider)
-                            <ul>
+                            <ul class="sublist">
                                 <li>Per law, you will need to attend an information session at least 24 hours before your abortion procedure. Based on the clinic you go to, this may be done in person or via phone. </li>
                             </ul>
                         </li>
                         <li>Speak with Child Advocacy Unit attorney to learn more about the process, answer background questions, and get prepped for court</li>
-                        <li>Child Advocacy Unit will submit a petition to the court</li>
-                        <li>The judicial bypass hearing will take place
-                            <ul>
+                        <li>Child Advocacy Unit will submit a petition to the court </li>
+                        <li>The judicial bypass hearing will take place 
+                            <ul class="sublist">
                                 <li>These hearings take place every Thursday at 9am at 1501 Arch St </li>
                                 <li>You will only be identified using your initials; everything is confidential</li>
                                 <li>If the judge grants your bypass, they make a finding that you are responsible and can consent to your own abortion procedure or the abortion is in your best interest</li>
@@ -98,35 +113,32 @@
                             </ul>
                         </li>
                         <li>You bring the signed court approval order to the abortion clinic when you have your appointment (to show the judicial bypass has been granted) and you’re all set!
-                            <ul>
+                            <ul class="sublist">
                                 <li>Please be in touch with your attorney if you have difficulties scheduling an appointment or have any issues with funding </li>
                             </ul>
                         </li>
-                        <!-- Add additional steps as needed -->
                     </ol>
                 </div>
 
-                <button class="accordion">Working with an Attorney</button>
+                <button class="accordion" style="font-size: 14px;">Working with an Attorney</button>
                 <div class="panel">
                     <p>You will initially get in touch with the attorney who will represent you in the judicial bypass hearing over the phone. In this phone call, the attorney will review what a judicial bypass is, ask some questions so they can fill out the paperwork required to schedule a hearing, and then the attorney will give an overview of what to expect during the judicial bypass hearing and review what questions the judge will likely ask you. </p>
                     <p>The information you share with the attorney is confidential and will NOT be shared with your family or anyone else outside of your legal team and the judge. Nothing will be sent to the minor, and no one will ever reach out to your family. </p>
-                    <p>Your attorney will need to gather information from you to fill out the judicial bypass petition that will be sent to the court in order to schedule your hearing. This information includes:
-                        <ul>
-                            <li>Your initials - the petition sent to the court only uses your initials to protect your identity </li>
-                            <li>Date of birth</li>
-                            <li>Address of where you are living </li>
-                            <li>How many weeks pregnant you are </li>
-                            <li>Your parents’ full names and addresses (this is required by law to be included in the petition but no one will speak with your parents. They will not be informed that you went through the judicial bypass process). </li>
-                            <li>Date and time of the informational consult from the abortion clinic 
-                                <ul class="sublist">
-                                    <li>This is when you went to the abortion clinic, spoke with a nurse, and/or watched or listened to an informational video/phone recording that included information on abortions, the risks, and gave you space to ask questions </li>
-                                </ul>
-                            </li>
+                    <p>Your attorney will need to gather information from you to fill out the judicial bypass petition that will be sent to the court in order to schedule your hearing. This information includes:</p>
+                    <ul>
+                        <li>Your initials - the petition sent to the court only uses your initials to protect your identity </li>
+                        <li>Date of birth</li>
+                        <li>Address of where you are living </li>
+                        <li>How many weeks pregnant you are </li>
+                        <li>Your parents’ full names and addresses (this is required by law to be included in the petition but no one will speak with your parents. They will not be informed that you went through the judicial bypass process). </li>
+                        <li>Date and time of the informational consult from the abortion clinic </li>
+                        <ul class="sublist">
+                            <li>This is when you went to the abortion clinic, spoke with a nurse, and/or watched or listened to an informational video/phone recording that included information on abortions, the risks, and gave you space to ask questions </li>
                         </ul>
-                    </p>
+                    </ul>
                 </div>
 
-                <button class="accordion">The Hearing with the Judge</button>
+                <button class="accordion" style="font-size: 14px;">The Hearing with the Judge</button>
                 <div class="panel">
                     <p>In Philadelphia, all judicial bypass hearings are done on Thursday mornings starting at 9am at Family Court located at 1501 Arch St, Philadelphia, PA 19102. You’ll arrive at the courthouse and will go through the check in line (including metal detectors) on the first floor. You cannot bring any food into the courthouse. Your attorney will let you know where in the building you’ll meet them at. The judicial bypass hearings are not done in the big courtrooms. Instead, you and your attorney will go directly into the judge's personal office. </p>
                     <p>The judge wants to understand that you are mature and responsible enough to make the decision to have an abortion. To do so, many judges may ask about:
@@ -143,7 +155,8 @@
                         </ul>
                     </p>
                 </div>
-
+            </div>
+        </section>
                 <!-- Scripts for Accordion -->
                 <script>
                     var acc = document.getElementsByClassName("accordion");
