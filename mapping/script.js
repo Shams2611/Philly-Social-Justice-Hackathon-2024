@@ -275,12 +275,17 @@ markerImages.forEach((element) => {
 
 map_items.forEach((map_item) => {
     console.log(map_item)
+    console.log(map_item.type)
     var index = 0;
     switch (map_item.type) {
         case "clinic": index = 0;
+        break;
         case "attorney": index = 1;
+        break;
         case "courthouse": index = 2;
+        break;
     }
+    console.log(index)
     let marker = L.marker([map_item.long, map_item.lat], markerOptionsArr[index]);
     marker.bindPopup(map_item.name).openPopup();
     marker.addTo(map).on('click', function (e) {
@@ -289,6 +294,7 @@ map_items.forEach((map_item) => {
         document.getElementById("hours-label").innerText = map_item.hours;
         document.getElementById("contacts-label").innerHTML = map_item.contacts
         document.getElementById("methods-info").style.display = "none";
+        document.getElementById("transportation-label").innerHTML = "<a href="+map_item.transport+">Google Maps Link</>";
         console.log(map_item.type)
         if (map_item.type == "clinic") {
             document.getElementById("methods-info").style.display = "block";
