@@ -1765,6 +1765,10 @@ input, select, textarea {
 			padding-left: 0.5em;
 		}
 
+		ul.sublist {
+			list-style-type: circle;
+		}
+
 		ul.style2 {
 			list-style: none;
 			padding-left: 0;
