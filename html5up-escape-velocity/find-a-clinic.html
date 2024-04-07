@@ -7,6 +7,11 @@
     <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet">
     <script src="https://kit.fontawesome.com/2b9cdc1c9a.js" crossorigin="anonymous"></script>
     <link rel="stylesheet" href="assets/css/main.css" />
+    <link rel="stylesheet" href="/mapping/styles.css">
+    <link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css"
+        integrity="sha256-p4NxAoJBhIIN+hmNHrzRCf9tD/miZyoHS5obTRR9BMY=" crossorigin="" />
+    <script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js"
+        integrity="sha256-20nQCchB9co0qIjJZRGuk2/Z9VM+kNiyxNV1lvTlZBo=" crossorigin=""></script>
 </head>
 <body class="no-sidebar is-preload">
     <div id="page-wrapper">
@@ -16,7 +21,7 @@
             <!-- Logo -->
             <div id="logo">
                 <h1><a href="index.html">Find a Clinic</a></h1>
-                <!-- <p>Locate clinics and resources close to you</p> -->
+                <p>Locate clinics and resources close to you</p>
                 <div id="quick-leave">
                     <button onclick="quickLeave()">Quick Leave <i class="fa-solid fa-right-from-bracket"></i></button>
                 </div>
@@ -34,56 +39,95 @@
         </section>
 
         <!-- Main -->
-        <section id="main" class="wrapper style1">
+        <section id="main map-main" class="wrapper style1">
             <div class="container">
-                
-                <!-- Map Section -->
-                <section>
-                    <div class="row gtr-150">
-                        <div class="col-12">
-                            <!-- Interactive Map Placeholder -->
-                            <div id="map" style="width: 100%; height: 450px;">
-                                <!-- Map will be inserted here -->
-                                <!-- Insert your map script here later -->
+                <div id="outer-container">
+                    <div class="map-container">
+                        <div id="map"></div>
+                        <div class="key-container">
+                            Key:
+                            <hr>
+                            <div class="key-entry">
+                                <img class="key-img" src="images/marker_clinic.png">
+                                Clinic
+                            </div>
+                            <div class="key-entry">
+                                <img class="key-img" src="images/marker_attorney.png">
+                                Attorney
+                            </div>
+                            <div class="key-entry">
+                                <img class="key-img" src="images/marker_courthouse.png">
+                                Courthouse
                             </div>
                         </div>
-                        
-                        <!-- <div class="col-12">
-                            <h3>Clinic Locations and Contacts</h3>
-                            <div class="box alt">
-                                <div class="row gtr-50 gtr-uniform">
-                                    <div class="col-4">
-                                        <h4>Philadelphia Women’s Center</h4>
-                                        <p>777 Appletree St 7th floor<br>Philadelphia, PA 19106<br>Phone: (215) 574-3590</p>
-                                    </div>
-                                    <div class="col-4">
-                                        <h4>Family Court</h4>
-                                        <p>1501 Arch St<br>Philadelphia, PA 19102</p>
-                                    </div>
-                                    <div class="col-4">
-                                        <h4>Planned Parenthood Locations</h4>
-                                        <p>1144 Locust St<br>Philadelphia, PA 19107<br>Phone: (215) 351-5560</p>
-                                        <p>2751 Comly Rd<br>Philadelphia, PA 19154<br>Phone: (215) 464-2225</p>
-                                    </div>
-                                    <div class="col-4">
-                                        <h4>Defenders Association of Philadelphia</h4>
-                                        <p>Child Advocacy Unit<br>1441 Sansom St<br>Philadelphia, PA 19102</p>
-                                        <p>Attorney Elizabeth Flanagan<br>Phone: (267) 293-9644<br>Email: JudicialBypass@philadefender.org</p>
-                                    </div>
-                                </div>
-                            </div>
-                        </div> -->
+                        <div class="blurb-container">
+                            <p>Pill Abortion: Available for up to 11 weeks</p>
+                            <p>Surgical Abortion: If you are getting a surgical abortion you may be required (based on
+                                anesthesia) to have a ride from someone you trust.
+                                If no one is available the facility can provide rides through a volunteer service
+                            </p>
+                        </div>
                     </div>
-                </section>
-
-            </div>
-        </section>
-
-        <!-- Footer -->
-        <section id="footer" class="wrapper">
-            <div class="title"></div>
-            <div class="container">
-                <!-- Footer content here -->
+                    <div class="info-container">
+                        <div class="info-label">
+                            <span id="name-label"></span>
+                        </div>
+                        <div class="info-label">
+                            <div class="info-label-icon">
+                                <i class="fa-solid fa-location-dot"></i>
+                            </div>
+                            <span id="addr-label"></span>
+                        </div>
+                        <div class="info-label">
+                            <div class="info-label-icon">
+                                <i class="fa-solid fa-clock"></i>
+                            </div>
+                            <span id="hours-label"></span>
+                        </div>
+                        <div class="info-label">
+                            <div class="info-label-icon">
+                                <i class="fa-solid fa-address-card"></i>
+                            </div>
+                            <span id="contacts-label"> </span>
+                        </div>
+                        <div id="methods-info" class="info-label" style="display: none;">
+                            <table>
+                                <tr>
+                                    <th></th>
+                                    <td>Offered</td>
+                                    <td>Until</td>
+                                </tr>
+                                <tr>
+                                    <th>
+                                        <div class="pill-info-label">Pill</div>
+                                    </th>
+                                    <td><i id="pill-check" class="fa-solid fa-check"></i><i id="pill-x" class="fa-solid fa-x"></i>
+                                    </td>
+                                    <td id="pill-info">xx week</td>
+                                </tr>
+                                <tr>
+                                    <th>
+                                        <div class="surgical-info-label">Surgical</div>
+                                    </th>
+                                    <td><i id="surgical-check" class="fa-solid fa-check"></i><i id="surgical-x"
+                                            class="fa-solid fa-x"></i></td>
+                                    <td id="surgical-info">xx week</td>
+                                </tr>
+                            </table>
+                        </div>
+                        <div class="info-label">
+                            <div class="info-label-icon">
+                                <i class="fa-solid fa-car-side"></i>
+                            </div>
+                            <span id="transportation-label"></span>
+                        </div>
+                    </div>
+                    <!-- <div class="tips-container">
+                        Below is a list of all of the clinics in Philadelphia that provide abortion services, including their links, hours of operation, scheduling procedures, and contact information. 
+            Keep in mind Google maps is a great resource for determining bus schedules routes.
+            If you are receiving a Surgical Abortion you may need a ride from someone over 18. If no one is available the facility will assist you in connecting with a volunteer riding program
+                    </div> -->
+                </div>
             </div>
         </section>
     </div>
@@ -95,5 +139,6 @@
     <script src="assets/js/breakpoints.min.js"></script>
     <script src="assets/js/util.js"></script>
     <script src="assets/js/main.js"></script>
+    <script src="/mapping/script.js"></script>
 </body>
 </html>
