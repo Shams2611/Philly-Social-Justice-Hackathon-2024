@@ -63,6 +63,7 @@ const attorneys = [
     }
 ];
 
+
 const courthouses = [
     {
         "type": "courthouse",
@@ -203,3 +204,7 @@ courthouses.forEach((courthouse) => {
         document.getElementById("methods-info").style.display = "none";
     });
 });
+
+function quickLeave() {
+    window.location.href = 'https://www.sephora.com';
+}

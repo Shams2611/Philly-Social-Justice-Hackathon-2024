@@ -13,8 +13,11 @@
         <!-- Header -->
         <section id="header" class="wrapper">
             <div id="logo">
-                <h1><a href="index.html">Abortion for Teens</a></h1>
+                <h1>Timeline and Court Process</a></h1>
                 <p>Confidential support and resources for abortion access</p>
+                <div id="quick-leave">
+                    <button onclick="quickLeave()">Quick Leave</button>
+                </div>
             </div>
             <nav id="nav">
                 <ul>
@@ -31,10 +34,9 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Timeline and Court Process - Abortion for Teens in Pennsylvania</title>
+    <title></title>
     <style>
         body {
-            font-family: Arial, sans-serif;
             color: #000; /* Making text color black for readability */
             background-color: #f8f8f8;
             margin: 0;
@@ -49,7 +51,6 @@
             border: none;
             text-align: left;
             outline: none;
-            font-size: 15px;
             transition: 0.4s;
         }
         .active, .accordion:hover {
@@ -63,7 +64,7 @@
             text-align: left;
         }
         a {
-            color: #0000EE; /* Standard link color */
+            color: pink; /* Standard link color */
             text-decoration: none;
         }
         a:hover {
@@ -72,52 +73,71 @@
     </style>
 </head>
 <body>
-
-<h2>Timeline and Court Process for Minors Seeking an Abortion in Pennsylvania</h2>
-
-<button class="accordion">How to Get an Abortion in Pennsylvania if You Are a Minor</button>
-<div class="panel">
-    <p>If you are under 18 in Pennsylvania, you can access abortion care with or without involving your parents. If you can involve your parent(s), they can provide parental consent for you to get an abortion. If you cannot involve them, you can go through the <a href="#judicial-bypass">judicial bypass process</a>.</p>
-</div>
-
-<button class="accordion">What is a Judicial Bypass?</button>
-<div class="panel">
-    <p>A “Judicial bypass” is the process of going to court and meeting privately with a judge about your plan to have an abortion. The judge will ask you questions about your life to determine if you’re mature and well-informed to make this decision on your own. This process is completely FREE, with no court fees, and an attorney from the <a href="https://www.philadefender.org/">Defenders Association of Philadelphia Child Advocacy Unit</a> will support you at no cost.</p>
-</div>
-
-<button class="accordion">Steps in the Judicial Bypass Process</button>
-<div class="panel">
-    <ol>
-        <li><strong>Initial appointment</strong> with an abortion provider. You will need to attend an information session at least 24 hours before your procedure. This may be done in person or via phone. Providers include <a href="https://www.plannedparenthood.org/">Planned Parenthood</a>, <a href="#womens-center">The Women’s Center</a>, or another provider.</li>
-        <li><strong>Speak with Child Advocacy Unit attorney</strong> to learn more about the process, answer background questions, and get prepped for court.</li>
-        <li><strong>Child Advocacy Unit will submit a petition</strong> to the court on your behalf.</li>
-        <li><strong>The judicial bypass hearing</strong> will take place. These hearings occur every Thursday at 9am at 1501 Arch St. Everything is confidential, and you will only be identified using your initials.</li>
-        <li>If the judge grants your bypass, <strong>they will sign and stamp the order of approval</strong>. If your abortion appointment is not already scheduled, call your provider to set up the appointment.</li>
-        <li><strong>Bring the signed court approval order</strong> to the abortion clinic when you have your appointment to show the judicial bypass has been granted.</li>
-    </ol>
-    <p>Please be in touch with your attorney if you have difficulties scheduling an appointment or have any issues with funding.</p>
-</div>
-
-<button class="accordion">Working with an Attorney</button>
-<div class="panel">
-    <p>You will initially get in touch with the attorney who will represent you in the judicial bypass hearing over the phone. The attorney will review what a judicial bypass is, fill out the paperwork required to schedule a hearing, and give an overview of what to expect during the hearing, including the questions the judge is likely to ask.</p>
-    <p>The information you share with the attorney is confidential and will
-    </div>
-    <button class="accordion">The Hearing with the Judge</button>
+    <section id="main" class="wrapper style2">
+        <div class="title">Timeline & Court Process</div>
+        <div class="container">
+            <!-- Judicial Bypass Process -->
+            <section>
+                <header class="style1">
+                    <h2>How to Get an Abortion in Pennsylvania if You Are a Minor</h2>
+                </header>
+                <div class="feature-list">
+                    <div class="row">
+                        <div class="col-12">
+                            <!-- Accordion for Section 1 -->
+                            <button class="accordion">How to Get an Abortion in Pennsylvania if You Are a Minor</button>
+                            <div class="panel">
+                                <p>If you are under 18 in Pennsylvania, you can access abortion care with or without involving your parents. If you can involve your parent(s), they can provide parental consent for you to get an abortion. If you cannot involve them, you can go through the <a href="#judicial-bypass">judicial bypass process</a>.</p>
+                            </div>
+                            
+                            <!-- Accordion for Section 2 -->
+                            <button class="accordion">What is a Judicial Bypass?</button>
+                            <div class="panel">
+                                <p>A “Judicial bypass” is the process of going to court and meeting privately with a judge about your plan to have an abortion. The judge will ask you questions about your life to determine if you’re mature and well-informed to make this decision on your own. This process is completely FREE, with no court fees, and an attorney from the <a href="https://www.philadefender.org/">Defenders Association of Philadelphia Child Advocacy Unit</a> will support you at no cost.</p>
+                            </div>
+                            
+                            <!-- Accordion for Section 3 -->
+                            <button class="accordion">Steps in the Judicial Bypass Process</button>
+                            <div class="panel">
+                                <ol>
+                                    <li><strong>Initial appointment</strong> with an abortion provider. You will need to attend an information session at least 24 hours before your procedure. This may be done in person or via phone. Providers include <a href="https://www.plannedparenthood.org/">Planned Parenthood</a>, <a href="#womens-center">The Women’s Center</a>, or another provider.</li>
+                                    <li><strong>Speak with Child Advocacy Unit attorney</strong> to learn more about the process, answer background questions, and get prepped for court.</li>
+                                    <li><strong>Child Advocacy Unit will submit a petition</strong> to the court on your behalf.</li>
+                                    <li><strong>The judicial bypass hearing</strong> will take place. These hearings occur every Thursday at 9am at 1501 Arch St. Everything is confidential, and you will only be identified using your initials.</li>
+                                    <li>If the judge grants your bypass, <strong>they will sign and stamp the order of approval</strong>. If your abortion appointment is not already scheduled, call your provider to set up the appointment.</li>
+                                    <li><strong>Bring the signed court approval order</strong> to the abortion clinic when you have your appointment to show the judicial bypass has been granted.</li>
+                                </ol>
+                                <p>Please be in touch with your attorney if you have difficulties scheduling an appointment or have any issues with funding.</p>
+                            </div>
+                            
+                            <!-- Accordion for Section 4 -->
+                            <button class="accordion">Working with an Attorney</button>
+                            <div class="panel">
+                                <p>You will initially get in touch with the attorney who will represent you in the judicial bypass hearing over the phone. The attorney will review what a judicial bypass is, fill out the paperwork required to schedule a hearing, and give an overview of what to expect during the hearing, including the questions the judge is likely to ask.</p>
+                                <p>The information you share with the attorney is confidential and will not be shared with anyone outside of your legal team and the judge.</p>
+                            </div>
+                            
+                            <!-- Accordion for Section 5 -->
+                            <button class="accordion">The Hearing with the Judge</button>
+                            <div class="panel">
+                                <p>In Philadelphia, all judicial bypass hearings are done on Thursday mornings starting at 9am at Family Court located at 1501 Arch St, Philadelphia, PA 19102. You'll arrive at the courthouse and will go through the check-in line (including metal detectors) on the first floor. You cannot bring any food into the courthouse. Your attorney will let you know where in the building you'll meet them. The judicial bypass hearings are not done in the big courtrooms. Instead, you and your attorney will go directly into the judge's personal office.</p>
+                                <p>The judge wants to understand that you are mature and responsible enough to make the decision to have an abortion. To do so, many judges may ask about:</p>
+                                <ul>
+                                    <li>If you are in school, what grade, how school is going</li>
+                                    <li>Plans for after graduating from school</li>
+                                    <li>If you are working</li>
+                                    <li>Have you talked to anyone else (any adults or people they trust, including the nurses at the abortion clinic) about your decision to get an abortion?</li>
+                                    <li>Do you feel comfortable talking with that person about your plans and any questions or concerns you have?</li>
+                                    <li>Do you feel like you have enough information to make an informed decision about having an abortion?</li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+        </div>
+    </section>
     
-    <div class="panel">
-        <p>In Philadelphia, all judicial bypass hearings are done on Thursday mornings starting at 9am at Family Court located at 1501 Arch St, Philadelphia, PA 19102. You'll arrive at the courthouse and will go through the check-in line (including metal detectors) on the first floor. You cannot bring any food into the courthouse. Your attorney will let you know where in the building you'll meet them. The judicial bypass hearings are not done in the big courtrooms. Instead, you and your attorney will go directly into the judge's personal office.</p>
-        <p>The judge wants to understand that you are mature and responsible enough to make the decision to have an abortion. To do so, many judges may ask about:
-        <ul>
-            <li>If you are in school, what grade, how school is going</li>
-            <li>Plans for after graduating from school</li>
-            <li>If you are working</li>
-            <li>Have you talked to anyone else (any adults or people they trust, including the nurses at the abortion clinic) about your decision to get an abortion?</li>
-            <li>Do you feel comfortable talking with that person about your plans and any questions or concerns you have?</li>
-            <li>Do you feel like you have enough information to make an informed decision about having an abortion?</li>
-        </ul>
-        </p>
-    </div>
     <script>
         var acc = document.getElementsByClassName("accordion");
         var i;
@@ -143,5 +163,5 @@
 <script src="assets/js/main.js"></script>
 </body>
 </html>
-    </body>
+ </body>
     </html>
