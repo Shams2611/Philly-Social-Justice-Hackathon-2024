@@ -4,7 +4,7 @@ Website which provides information for minors who want to access abortions, with
 # Tech stack:
 - Escape Velocity by HTML5 UP
 - Leaflet JS: https://leafletjs.com/
-- Firebase
+- Firebase: https://console.firebase.google.com/project/minor-abortion/database/backups
 - Map Tiler
 
 # Next Steps
