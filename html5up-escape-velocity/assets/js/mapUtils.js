@@ -100,11 +100,17 @@ xhttp.onload = function() {
         marker.addTo(map).on('click', function (e) {
             document.getElementById("name-label").innerText = map_item.name;
             document.getElementById("addr-label").innerText = map_item.addr;
-            document.getElementById("hours-label").innerText = map_item.hours;
-            document.getElementById("contacts-label").innerHTML = map_item.contacts;
+            // document.getElementById("hours-label").innerText = map_item.hours;
+            document.getElementById("contacts-label").innerHTML = map_item.phone;
             document.getElementById("methods-info").style.display = "none";
             document.getElementById("transportation-label").innerHTML = "<a href="+map_item.transport+">Google Maps Link</a>";
-            console.log(map_item.type)
+            let otherInfo = "";
+            map_item.otherInfo.forEach((info) => {
+                otherInfo += `${info}<br/>`;
+            });
+            console.log(map_item.otherInfo);
+            document.getElementById("other-info-label").innerHTML = otherInfo;
+            console.log(map_item.type);
             if (map_item.type == "clinic") {
                 document.getElementById("methods-info").style.display = "block";
                 document.getElementById("pill-check").style.display = map_item.pillOffered ? "block" : "none"
