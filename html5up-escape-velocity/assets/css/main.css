@@ -1480,6 +1480,15 @@ input, select, textarea {
 			line-height: 1.5em;
 		}
 
+		header.style4 p {
+			color: #b1b4b9;
+			display: block;
+			margin: 1.15em 0 0 0;
+			font-size: 1em;
+			letter-spacing: 0.075em;
+			line-height: 1.5em;
+		}
+
 /* Table */
 
 	table {
