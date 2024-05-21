@@ -11,27 +11,7 @@
 	</head>
 	<body class="homepage is-preload">
 		<div id="page-wrapper">
-
-			<!-- Header -->
-			<section id="header" class="wrapper">
-				<div id="logo">
-					<h1><a target="_self" href="index.html">Abortions for Minors without Notifying Your Parents</a></h1>
-					<p>Navigating the judicial bypass process in Philadelphia </p>
-					<div id="quick-leave">
-						<button onclick="quickLeave()">Quick Leave <i class="fa-solid fa-right-from-bracket"></i></button>
-					</div>
-				</div>
-				<nav id="nav">
-					<ul>
-						<li class="current"><a href="index.html">Home</a></li>
-						<li><a target="_self" href="html5up-escape-velocity/timeline.html">Timeline & Court Processes</a></li>
-						<li><a target="_self" href="html5up-escape-velocity/find-a-clinic.html">Find a Clinic</a></li>
-						<li><a target="_self" href="html5up-escape-velocity/funding.html">Get Funding</a></li>
-						<li><a target="_self" href="html5up-escape-velocity/contact.html">Contact an Attorney</a></li>
-					</ul>
-				</nav>
-			</section>
-
+			<div class="navigation"></div>
 			<!-- Intro -->
 			<section id="intro" class="wrapper style1">
 				<div class="title">Welcome</div>
@@ -143,6 +123,10 @@
         <script src="html5up-escape-velocity/assets/js/browser.min.js"></script>
         <script src="html5up-escape-velocity/assets/js/breakpoints.min.js"></script>
         <script src="html5up-escape-velocity/assets/js/util.js"></script>
-        <script src="html5up-escape-velocity/assets/js/main.js"></script>		
+        <script src="html5up-escape-velocity/assets/js/main.js"></script>	
+		<script>$(document).ready(function() {
+    $('.navigation').load('html5up-escape-velocity/navbar.html');
+});
+</script>	
 	</body>
 </html>

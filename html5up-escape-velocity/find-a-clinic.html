@@ -28,26 +28,8 @@
     <div id="page-wrapper">
 
         <!-- Header -->
-        <section id="header" class="wrapper">
-            <!-- Logo -->
-            <div id="logo">
-                <h1>Find a Clinic</h1>
-                <p>Locate clinics and resources close to you</p>
-                <div id="quick-leave">
-                    <button onclick="quickLeave()">Quick Leave <i class="fa-solid fa-right-from-bracket"></i></button>
-                </div>
-            </div>
-            <!-- Nav -->
-            <nav id="nav">
-                <ul>
-                    <li><a target="_self" href="../index.html">Home</a></li>
-                    <li><a target="_self" href="timeline.html">Timeline & Court Processes</a></li>
-                    <li class="current"><a target="_self" href="find-a-clinic.html">Find a Clinic</a></li>
-                    <li><a target="_self" href="funding.html">Get Funding</a></li>
-                    <li><a target="_self" href="contact.html">Contact an Attorney</a></li>
-                </ul>
-            </nav>
-        </section>
+       
+			<div class="navigation"></div>
 
         <!-- Main -->
         <section id="main map-main" class="wrapper style1">
@@ -171,8 +153,6 @@
         </section>
     </div>
 
-
-
     <!-- Scripts -->
     <script src="assets/js/jquery.min.js"></script>
     <script src="assets/js/jquery.dropotron.min.js"></script>
@@ -181,6 +161,12 @@
     <script src="assets/js/util.js"></script>
     <script src="assets/js/main.js"></script>
     <script src="assets/js/mapUtils.js"></script>
+    <script>
+
+$(document).ready(function() {
+    $('.navigation').load('navbar.html');
+});
+    </script>
 </body>
 
 </html>

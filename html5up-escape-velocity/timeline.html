@@ -61,24 +61,8 @@
 <body class="is-preload">
     <div id="page-wrapper">
         <!-- Header -->
-        <section id="header" class="wrapper">
-            <div id="logo">
-                <h1>Timeline and Court Process</h1>
-                <p>Support and resources for abortion access</p>
-                <div id="quick-leave">
-                    <button onclick="quickLeave()">Quick Leave <i class="fa-solid fa-right-from-bracket"></i></button>
-                </div>
-            </div>
-            <nav id="nav">
-                <ul>
-                    <li><a target="_self" href="../index.html">Home</a></li>
-                    <li class="current"><a href="timeline.html">Timeline & Court Processes</a></li>
-                    <li><a target="_self" href="find-a-clinic.html">Find a Clinic</a></li>
-                    <li><a target="_self" href="funding.html">Get Funding</a></li>
-                    <li><a target="_self" href="contact.html">Contact an Attorney</a></li>
-                </ul>
-            </nav>
-        </section>
+       
+			<div class="navigation"></div>
 
         <!-- Main Content -->
         <section id="main" class="wrapper style2">
@@ -215,6 +199,10 @@
         <script src="assets/js/breakpoints.min.js"></script>
         <script src="assets/js/util.js"></script>
         <script src="assets/js/main.js"></script>
+		<script>$(document).ready(function() {
+    $('.navigation').load('navbar.html');
+});
+</script>	
     </div>
 </body>
 </html>
