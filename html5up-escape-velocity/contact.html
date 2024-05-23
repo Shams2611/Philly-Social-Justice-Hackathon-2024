@@ -15,24 +15,17 @@
     <div id="page-wrapper">
 
         <!-- Header -->
-        <section id="header" class="wrapper">
-            <div id="logo">
-                <h1><a target="_self" href="index.html">Contact an Attorney</a></h1>
-                <p>Confidential support and resources for abortion access</p>
-                <div id="quick-leave">
-                    <button onclick="quickLeave()">Quick Leave <i class="fa-solid fa-right-from-bracket"></i></button>
-                </div>
-            </div>
-            <nav id="nav">
-                <ul>
-                    <li><a target="_self" href="../index.html">Home</a></li>
-                    <li><a target="_self" href="timeline.html">Timeline & Court Processes</a></li>
-                    <li><a target="_self" href="find-a-clinic.html">Find a Clinic</a></li>
-                    <li><a target="_self" href="funding.html">Get Funding</a></li>
-                    <li class="current"><a href="contact.html">Contact an Attorney</a></li>
-                </ul>
-            </nav>
-        </section>
+            <section id="header" class="wrapper">
+                <div id="logo">
+                    <h1><a target="_self" href="index.html">Contact an Attorney</a></h1>
+                    <p>Get connected with an attorney to assist you through the judicial bypass process</p>
+                    <div id="quick-leave">
+                        <button onclick="quickLeave()">Quick Leave <i class="fa-solid fa-right-from-bracket"></i></button>
+                    </div>
+                </div> 
+                <div class="navigation"></div>
+            </section>
+
 
         <!-- Main -->
         <section id="main" class="wrapper">
@@ -58,6 +51,8 @@
                     attorney will give an overview of what to expect during the judicial bypass hearing and review what
                     questions the judge will likely ask you.
                 </p>
+                <br>
+                <p><h6>Any information provided in the form below will not be saved by this website.</h6></p>
 
                 <!-- Contact Form -->
                 <section>
@@ -99,7 +94,7 @@
         </section>
 
         <!-- Footer -->
-
+        <div class="footer"></div>
 
     </div>
 
@@ -111,6 +106,11 @@
     <script src="assets/js/util.js"></script>
     <script src="assets/js/main.js"></script>
     <script src="assets/js/contactForm.js"></script>
+		<script>$(document).ready(function() {
+    $('.navigation').load('navbar.html');    
+    $('.footer').load('footer.html');
+});
+</script>	
 </body>
 
 </html>
